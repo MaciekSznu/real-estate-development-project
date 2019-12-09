@@ -1,0 +1,17 @@
+@import "../../../variables.scss";
+
+.columnWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100px;
+
+  .columnTitle {
+    color: $color-3;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    padding-left: 1rem;
+    margin-bottom: .5rem;
+  }
+}
+

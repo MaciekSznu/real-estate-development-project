@@ -1,0 +1,23 @@
+@import "../../../variables.scss";
+
+.rangesWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: auto;
+  flex-grow: 1;
+
+  .rangesItem {
+    width: 100%;
+    margin-right: 2rem;
+    margin-left: .5rem;
+
+    .rangesTitle {
+      color: $color-3;
+      font-family: 'Rubik', sans-serif;
+      font-weight: 500;
+      padding-bottom: .5rem;
+    }
+  }
+}
+

@@ -1,0 +1,21 @@
+@import "../../variables.scss";
+
+.investmentViewWrapper {
+  width: 100%;
+  height: auto;
+  padding: 3rem;
+
+  .sectionTitle {
+    color: $color-4;
+    font-family: 'Rubuk', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+  }
+
+  .sectionParagraph {
+    color: $color-5;
+    font-family: 'Rubuk', sans-serif;
+    font-weight: 300;
+    line-height: 1.5rem;
+  }
+}
