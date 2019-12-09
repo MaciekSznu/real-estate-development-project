@@ -1,7 +1,7 @@
 import flatsArray from "../../assets/flatsArray";
 
-const minFloorValue = Math.min.apply(Math, flatsArray.map(function(o) { return o.floor; }));
-const maxFloorValue = Math.max.apply(Math, flatsArray.map(function(o) { return o.floor; }));
+const minFloorValue = Math.min.apply(Math, flatsArray.map(flat => flat.floor));
+const maxFloorValue = Math.max.apply(Math, flatsArray.map(flat => flat.floor));
 export const floorRange =
   {
     minValue: minFloorValue,
@@ -14,8 +14,8 @@ export const floorRange =
     step: 1,
   };
 
-const minRoomsValue = Math.min.apply(Math, flatsArray.map(function(o) { return o.rooms; }));
-const maxRoomsValue = Math.max.apply(Math, flatsArray.map(function(o) { return o.rooms; }));
+const minRoomsValue = Math.min.apply(Math, flatsArray.map(flat => flat.rooms));
+const maxRoomsValue = Math.max.apply(Math, flatsArray.map(flat => flat.rooms));
 export const roomsRange =
   {
     minValue: minRoomsValue,
@@ -28,8 +28,8 @@ export const roomsRange =
     step: 1,
   };
 
-const minAreaValue = Math.min.apply(Math, flatsArray.map(function(o) { return o.area; }));
-const maxAreaValue = Math.max.apply(Math, flatsArray.map(function(o) { return o.area; }));
+const minAreaValue = Math.min.apply(Math, flatsArray.map(flat => flat.area));
+const maxAreaValue = Math.max.apply(Math, flatsArray.map(flat => flat.area));
 export const areaRange =
   {
     minValue: 0,
@@ -42,8 +42,8 @@ export const areaRange =
     step: 5,
   };
 
-const minPriceValue = Math.min.apply(Math, flatsArray.map(function(o) { return o.price; }));
-const maxPriceValue = Math.max.apply(Math, flatsArray.map(function(o) { return o.price; }));
+const minPriceValue = Math.min.apply(Math, flatsArray.map(flat => flat.price));
+const maxPriceValue = Math.max.apply(Math, flatsArray.map(flat => flat.price));
 export const priceRange =
   {
     minValue: 100000,
