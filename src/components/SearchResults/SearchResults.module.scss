@@ -1,0 +1,53 @@
+@import "../../variables.scss";
+
+.searchResultHeader {
+  color: $color-3;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  margin-bottom: .5rem;
+}
+
+.searchResultTable {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  border-top: 1px solid $color-4;
+
+  .searchResultTableHeader {
+
+    th {
+      color: $color-1;
+      font-family: 'Rubik', sans-serif;
+      font-weight: 400;
+      padding: .5rem;
+      border-bottom: 1px solid $color-4;
+      background-color: rgba($color-4, .2);
+    }
+  }
+
+  .searchResultTableRow {
+    
+    cursor: pointer;
+    
+    td {
+    color: $color-4;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    padding: .3rem;
+    border-bottom: 1px solid $color-4;
+    }
+  }
+
+  tr:nth-child(even) {
+    background-color: rgba($color-4, .1);
+  }
+
+  tr:hover {
+    background-color: rgba($color-4, .2);
+  }
+}
+
+
+
+
+

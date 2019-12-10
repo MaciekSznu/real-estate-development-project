@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import flatsArray from '../../assets/flatsArray';
-//import styles from './SearchResults.module.scss';
+import styles from './SearchResults.module.scss';
 
 console.log(flatsArray);
 
@@ -15,7 +15,7 @@ class SearchResultsTable extends React.Component {
     return flatsArray.map((flat, index) => {
       const {buildingNumber, flatNumber, floor, rooms, area, balcony, terrace, price, status, chart} = flat
       return (
-        <tr key={flatNumber}>
+        <tr className={styles.searchResultTableRow} key={flatNumber}>
           <td>{buildingNumber}</td>
           <td>{flatNumber}</td>
           <td>{floor}</td>
@@ -54,10 +54,10 @@ class SearchResultsTable extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <h2>Nasze mieszkania</h2>
-        <table>
+        <h2 className={styles.searchResultHeader}>Nasze mieszkania</h2>
+        <table className={styles.searchResultTable}>
           <tbody>
-            <tr>{this.renderSearchResultsHeader()}</tr>
+            <tr className={styles.searchResultTableHeader}>{this.renderSearchResultsHeader()}</tr>
             {this.renderSearchResults()}
           </tbody>
         </table>
