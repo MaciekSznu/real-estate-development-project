@@ -1,15 +1,16 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
 import flatsArray from '../../assets/flatsArray';
 import styles from './SearchResults.module.scss';
 
-console.log(flatsArray);
+//console.log(flatsArray);
 
 class SearchResultsTable extends React.Component {
-  contsructor(props) {
-    //super(props);
-    this.setState = flatsArray
+  state = {
+    allFlats: flatsArray,
+    selectedFlats: null,
   }
+
+  isBooleanTrue = (item) => { return item === true ? '\u2022' : ''};
 
   renderSearchResults() {
     return flatsArray.map((flat, index) => {
@@ -21,8 +22,8 @@ class SearchResultsTable extends React.Component {
           <td>{floor}</td>
           <td>{rooms}</td>
           <td>{area}</td>
-          <td>{balcony}</td>
-          <td>{terrace}</td>
+          <td>{this.isBooleanTrue(balcony)}</td>
+          <td>{this.isBooleanTrue(terrace)}</td>
           <td>{price}</td>
           <td>{status}</td>
           <td>{chart}</td>

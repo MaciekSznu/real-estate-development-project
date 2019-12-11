@@ -1,25 +1,18 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import { balconyCheckboxes } from '../../../components/Checkboxes/CheckboxesData';
 import Checkbox from '../../../components/Checkboxes/Checkbox';
 import styles from './Checkboxes.module.scss';
 
 class BalconyCheckboxContainer extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
+  state = {
       checkedItems: new Map(),
     }
 
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(e) {
+  handleChange = (e) => {
     const item = e.target.name;
     const isChecked = e.target.checked;
     this.setState(prevState => ({ checkedItems: prevState.checkedItems.set(item, isChecked)}));
-    // console.log(this.state); this.state store information about checked and unchecked boxes
+    console.log(this.state);
   }
 
   render() {
