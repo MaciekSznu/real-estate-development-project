@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import flatsArray from '../../assets/flatsArray';
 import styles from './SearchResults.module.scss';
 

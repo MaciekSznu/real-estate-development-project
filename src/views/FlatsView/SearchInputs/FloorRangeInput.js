@@ -1,7 +1,7 @@
 import React from 'react';
 import { floorRange } from '../../../components/Ranges/RangesData';
 import InputRange from 'react-input-range';
-import styles from './RangeSearchInputs.scss';
+import './RangeSearchInputs.scss';
 
 class FloorRangeContainer extends React.Component {
   constructor(props) {

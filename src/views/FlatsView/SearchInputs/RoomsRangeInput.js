@@ -1,8 +1,7 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import { roomsRange } from '../../../components/Ranges/RangesData';
 import InputRange from 'react-input-range';
-//import styles from 'react-input-range/lib/css/index.css';
+import './RangeSearchInputs.scss';
 
 class RoomsRangeContainer extends React.Component {
   constructor(props) {
