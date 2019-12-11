@@ -1,7 +1,7 @@
 import React from 'react';
 import { areaRange } from '../../../components/Ranges/RangesData';
 import InputRange from 'react-input-range';
-import styles from 'react-input-range/lib/css/index.css';
+//import styles from 'react-input-range/lib/css/index.css';
 
 class AreaRangeContainer extends React.Component {
   constructor(props) {

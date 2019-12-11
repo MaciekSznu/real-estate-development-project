@@ -10,7 +10,7 @@ export const floorRange =
       min: minFloorValue,
       max: maxFloorValue,
     },
-    formatLabel: '',
+    label: '',
     step: 1,
   };
 
@@ -24,7 +24,7 @@ export const roomsRange =
       min: minRoomsValue,
       max: maxRoomsValue,
     },
-    formatLabel: '',
+    label: '',
     step: 1,
   };
 
@@ -38,7 +38,7 @@ export const areaRange =
       min: minAreaValue,
       max: maxAreaValue,
     },
-    formatLabel: 'm2',
+    label: 'm2',
     step: 5,
   };
 
@@ -46,13 +46,17 @@ const minPriceValue = Math.min.apply(Math, flatsArray.map(flat => flat.price));
 const maxPriceValue = Math.max.apply(Math, flatsArray.map(flat => flat.price));
 export const priceRange =
   {
-    minValue: 100000,
-    maxValue: 1000000,
+    minValue: minPriceValue,
+    maxValue: maxPriceValue,
     value: {
       min: minPriceValue,
       max: maxPriceValue,
     },
-    formatLabel: 'zł',
+    label: 'zł',
     step: 25000,
   };
 
+  export const numberFormat = (value) =>
+  new Intl.NumberFormat('latn', {
+    style: 'decimal',
+  }).format(value);
