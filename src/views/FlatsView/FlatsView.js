@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./FlatsView.module.scss";
 import CheckboxSearchWrapper from "./SearchInputs/CheckboxSearchWrapper";
 import RangeSearchInputs from "../FlatsView/SearchInputs/RangeSearchInputs";
-import SearchResultsTable from "../../components/SearchResults/SearchResults";
+import SearchResultsTable from "../../components/SearchResults/SearchResultsTable";
 
 class FlatsView extends React.Component {
 

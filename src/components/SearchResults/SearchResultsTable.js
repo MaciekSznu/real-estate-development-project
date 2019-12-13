@@ -1,36 +1,36 @@
 import React from 'react';
+//import AppContext from '../../context';
 import flatsArray from '../../assets/flatsArray';
 import styles from './SearchResults.module.scss';
 
-//console.log(flatsArray);
-
 class SearchResultsTable extends React.Component {
   state = {
-    allFlats: flatsArray,
-    selectedFlats: null,
+    flats: flatsArray,
   }
 
   isBooleanTrue = (item) => { return item === true ? '\u2022' : ''};
 
   renderSearchResults() {
-    return flatsArray.map((flat, index) => {
-      const {buildingNumber, flatNumber, floor, rooms, area, balcony, terrace, price, status, chart} = flat
-      return (
-        <tr className={styles.searchResultTableRow} key={flatNumber}>
-          <td>{buildingNumber}</td>
-          <td>{flatNumber}</td>
-          <td>{floor}</td>
-          <td>{rooms}</td>
-          <td>{area}</td>
-          <td>{this.isBooleanTrue(balcony)}</td>
-          <td>{this.isBooleanTrue(terrace)}</td>
-          <td>{price}</td>
-          <td>{status}</td>
-          <td>{chart}</td>
-        </tr>
+    return (
+        this.state.flats.map((flat, index) => {
+        const {buildingNumber, flatNumber, floor, rooms, area, balcony, terrace, price, status, chart} = flat
+        return (
+          <tr className={styles.searchResultTableRow} key={flatNumber}>
+            <td>{buildingNumber}</td>
+            <td>{flatNumber}</td>
+            <td>{floor}</td>
+            <td>{rooms}</td>
+            <td>{area}</td>
+            <td>{this.isBooleanTrue(balcony)}</td>
+            <td>{this.isBooleanTrue(terrace)}</td>
+            <td>{price}</td>
+            <td>{status}</td>
+            <td>{chart}</td>
+          </tr>
+          )
+        })
       )
-    })
-  }
+    }
 
   renderSearchResultsHeader() {
     let header = {
