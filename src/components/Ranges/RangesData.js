@@ -57,6 +57,6 @@ export const priceRange =
   };
 
   export const numberFormat = (value) =>
-  new Intl.NumberFormat('latn', {
+  new Intl.NumberFormat('pl', {
     style: 'decimal',
   }).format(value);

@@ -9,15 +9,11 @@ class AreaRangeContainer extends React.Component {
     super(props);
 
     this.state = areaRange;
-    console.log(this.state);
-
   }
 
   render() {
     return (
-      <React.Fragment>
-        <InputRange minValue={this.state.minValue} maxValue={this.state.maxValue} value={this.state.value} step={this.state.step} onChange={value => this.setState({value})} onChangeComplete={value => console.log(this.state.value)} formatLabel={value => `${numberFormat(value)} ${this.state.label}`} />
-      </React.Fragment>
+      <InputRange minValue={this.state.minValue} maxValue={this.state.maxValue} value={this.state.value} step={this.state.step} onChange={value => this.setState({value})} onChangeComplete={value => console.log(this.state.value)} formatLabel={value => `${numberFormat(value)} ${this.state.label}`} />
     );
   }
 }

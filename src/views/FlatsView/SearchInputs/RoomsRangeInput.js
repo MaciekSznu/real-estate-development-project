@@ -8,19 +8,11 @@ class RoomsRangeContainer extends React.Component {
     super(props);
 
     this.state = roomsRange;
-    console.log(this.state);
   }
 
   render() {
-    const roomsChangedValue = {
-      ...this.state.value
-    }
-    console.log(roomsChangedValue);
-
     return (
-      <React.Fragment>
-        <InputRange minValue={this.state.minValue} maxValue={this.state.maxValue} value={this.state.value} step={this.state.step} onChange={value => this.setState({value})} onChangeComplete={value => console.log(value) } allowSameValues={true} />
-      </React.Fragment>
+      <InputRange minValue={this.state.minValue} maxValue={this.state.maxValue} value={this.state.value} step={this.state.step} onChange={value => this.setState({value})} onChangeComplete={value => console.log(value) } allowSameValues={true} />
     );
   }
 }

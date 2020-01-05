@@ -1,5 +1,4 @@
 import React from 'react';
-//import AppContext from '../../context';
 import flatsArray from '../../assets/flatsArray';
 import styles from './SearchResults.module.scss';
 
@@ -33,7 +32,7 @@ class SearchResultsTable extends React.Component {
     }
 
   renderSearchResultsHeader() {
-    let header = {
+    const header = {
       buildingNumber: 'budynek',
       flatNumber: 'mieszkanie',
       floor: 'piętro',
@@ -46,7 +45,7 @@ class SearchResultsTable extends React.Component {
       chart: 'karta',
     }
 
-    let headerValues = Object.values(header)
+    const headerValues = Object.values(header)
     return headerValues.map((value, index) => {
       return <th key={index}>{value.toUpperCase()}</th>
     })
@@ -54,7 +53,7 @@ class SearchResultsTable extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
         <h2 className={styles.searchResultHeader}>Nasze mieszkania</h2>
         <table className={styles.searchResultTable}>
           <tbody>
@@ -62,7 +61,7 @@ class SearchResultsTable extends React.Component {
             {this.renderSearchResults()}
           </tbody>
         </table>
-      </React.Fragment>
+      </>
     )
   }
 }

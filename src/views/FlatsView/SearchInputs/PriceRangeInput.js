@@ -8,14 +8,11 @@ class PriceRangeContainer extends React.Component {
     super(props);
 
     this.state = priceRange;
-    console.log(this.state);
   }
 
   render() {
     return (
-      <React.Fragment>
-        <InputRange minValue={this.state.minValue} maxValue={this.state.maxValue} value={this.state.value} step={this.state.step} onChange={value => this.setState({value})} onChangeComplete={value => console.log(value)} formatLabel={value => `${numberFormat(value)} ${this.state.label}`} />
-      </React.Fragment>
+      <InputRange minValue={this.state.minValue} maxValue={this.state.maxValue} value={this.state.value} step={this.state.step} onChange={value => this.setState({value})} onChangeComplete={value => console.log(value)} formatLabel={value => `${numberFormat(value)} ${this.state.label}`} />
     );
   }
 }

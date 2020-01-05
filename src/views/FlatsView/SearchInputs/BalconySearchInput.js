@@ -17,18 +17,16 @@ class BalconyCheckboxContainer extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
-        <div className={styles.checkboxesWrapper} >
-        {
-          balconyCheckboxes.map(item => (
-            <label className={styles.checkboxLabel} key={item.key}>
-              {item.name}
-              <Checkbox className={styles.checkbox} name={item.name} checked={this.state.checkedItems.get(item.name)} onChange={this.handleChange} />
-            </label>
-          ))
-        }
-        </div>
-      </React.Fragment>
+      <div className={styles.checkboxesWrapper} >
+      {
+        balconyCheckboxes.map(item => (
+          <label className={styles.checkboxLabel} key={item.key}>
+            {item.name}
+            <Checkbox className={styles.checkbox} name={item.name} checked={this.state.checkedItems.get(item.name)} onChange={this.handleChange} />
+          </label>
+        ))
+      }
+      </div>
     );
   }
 }
