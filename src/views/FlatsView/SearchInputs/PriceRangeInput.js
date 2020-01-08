@@ -10,9 +10,10 @@ class PriceRangeContainer extends React.Component {
     this.state = priceRange;
   }
 
+  // wywoływana onChangeComplete funkcja onRangeChange z parametrem zwracająca objekt ({price: value})
   render() {
     return (
-      <InputRange minValue={this.state.minValue} maxValue={this.state.maxValue} value={this.state.value} step={this.state.step} onChange={value => this.setState({value})} onChangeComplete={value => console.log(value)} formatLabel={value => `${numberFormat(value)} ${this.state.label}`} />
+      <InputRange minValue={this.state.minValue} maxValue={this.state.maxValue} value={this.state.value} step={this.state.step} onChange={value => this.setState({value})} onChangeComplete={value => this.props.onPriceChange({price: value})} formatLabel={value => `${numberFormat(value)} ${this.state.label}`} />
     );
   }
 }

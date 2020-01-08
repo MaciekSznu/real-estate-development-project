@@ -13,7 +13,7 @@ class AreaRangeContainer extends React.Component {
 
   render() {
     return (
-      <InputRange minValue={this.state.minValue} maxValue={this.state.maxValue} value={this.state.value} step={this.state.step} onChange={value => this.setState({value})} onChangeComplete={value => console.log(this.state.value)} formatLabel={value => `${numberFormat(value)} ${this.state.label}`} />
+      <InputRange minValue={this.state.minValue} maxValue={this.state.maxValue} value={this.state.value} step={this.state.step} onChange={value => this.setState({value})} onChangeComplete={value => this.props.onAreaChange({area: value})} formatLabel={value => `${numberFormat(value)} ${this.state.label}`} />
     );
   }
 }

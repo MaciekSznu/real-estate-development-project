@@ -11,7 +11,7 @@ const CheckboxSearchWrapper = () => (
       <BalconyCheckboxContainer />
     </div>
     <div className={styles.columnWrapper}>
-      <h3 className={styles.columnTitle}>Balkon</h3>
+      <h3 className={styles.columnTitle}>Status</h3>
       <StatusCheckboxContainer />
     </div>
   </>

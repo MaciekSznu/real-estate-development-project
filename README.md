@@ -1,6 +1,6 @@
 # Real estate development project - draft version
 
-Create with create-react-app
+Created with create-react-app.
 
 Used additional packages:
   - node-sass,

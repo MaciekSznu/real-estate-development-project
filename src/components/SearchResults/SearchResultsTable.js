@@ -7,9 +7,11 @@ class SearchResultsTable extends React.Component {
     flats: flatsArray,
   }
 
-  isBooleanTrue = (item) => { return item === true ? '\u2022' : ''};
+  // dodać consta z filtrami i jego mapować w renderSearchResults
 
-  renderSearchResults() {
+  isBooleanTrue = (item) => {return item === true ? '\u2022' : ''};
+
+  renderSearchResults(props) {
     return (
         this.state.flats.map((flat, index) => {
         const {buildingNumber, flatNumber, floor, rooms, area, balcony, terrace, price, status, chart} = flat
@@ -52,6 +54,9 @@ class SearchResultsTable extends React.Component {
   }
 
   render() {
+    // this.props.filter - propsy z wartościami przefiltrowanymi
+    console.log(this.props);
+
     return (
       <>
         <h2 className={styles.searchResultHeader}>Nasze mieszkania</h2>
