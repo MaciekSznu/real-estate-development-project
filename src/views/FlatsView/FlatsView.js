@@ -8,7 +8,7 @@ class FlatsView extends React.Component {
 
   // stan filtrów po zmianie
   state = {filters:{
-    selectedFloor: {},
+    selectedFloors: {},
     selectedRooms: {},
     selectedArea: {},
     selectedPrice: {},

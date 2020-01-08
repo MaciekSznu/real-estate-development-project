@@ -60,3 +60,5 @@ export const priceRange =
   new Intl.NumberFormat('pl', {
     style: 'decimal',
   }).format(value);
+
+export { minFloorValue, maxFloorValue, minAreaValue, maxAreaValue, minRoomsValue, maxRoomsValue, minPriceValue, maxPriceValue };

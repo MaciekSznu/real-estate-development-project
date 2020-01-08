@@ -1,5 +1,6 @@
 import React from 'react';
 import flatsArray from '../../assets/flatsArray';
+import { minFloorValue, maxFloorValue, minAreaValue, maxAreaValue, minRoomsValue, maxRoomsValue, minPriceValue, maxPriceValue } from '../Ranges/RangesData';
 import styles from './SearchResults.module.scss';
 
 class SearchResultsTable extends React.Component {
@@ -7,13 +8,24 @@ class SearchResultsTable extends React.Component {
     flats: flatsArray,
   }
 
-  // dodać consta z filtrami i jego mapować w renderSearchResults
-
   isBooleanTrue = (item) => {return item === true ? '\u2022' : ''};
 
   renderSearchResults(props) {
     return (
-        this.state.flats.map((flat, index) => {
+        this.state.flats.filter((el) => {
+          return el.floor <= (this.props.filters.selectedFloors.max !== undefined ? this.props.filters.selectedFloors.max : maxFloorValue) &&
+                 el.floor >= (this.props.filters.selectedFloors.min !== undefined ? this.props.filters.selectedFloors.min : minFloorValue) &&
+                 el.rooms <= (this.props.filters.selectedRooms.max !== undefined ? this.props.filters.selectedRooms.max : maxRoomsValue) &&
+                 el.rooms >= (this.props.filters.selectedRooms.min !== undefined ? this.props.filters.selectedRooms.min : minRoomsValue) &&
+                 el.area <= (this.props.filters.selectedArea.max !== undefined ? this.props.filters.selectedArea.max : maxAreaValue) &&
+                 el.area >= (this.props.filters.selectedArea.min !== undefined ? this.props.filters.selectedArea.min : minAreaValue) &&
+                 el.price <= (this.props.filters.selectedPrice.max !== undefined ? this.props.filters.selectedPrice.max : maxPriceValue) &&
+                 el.price >= (this.props.filters.selectedPrice.min !== undefined ? this.props.filters.selectedPrice.min : minPriceValue) &&
+                 el.balcony !== '' &&
+                 el.terrace !== '' &&
+                 el.status === 'for sale'
+        })
+        .map((flat, index) => {
         const {buildingNumber, flatNumber, floor, rooms, area, balcony, terrace, price, status, chart} = flat
         return (
           <tr className={styles.searchResultTableRow} key={flatNumber}>
