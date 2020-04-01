@@ -40,27 +40,25 @@
   &--min, &--max {
     bottom: -1.4rem;
     position: absolute;
+    display: none;
   }
 
-  &--min {
-    left: 0;
-  }
+  // &--min {
+  //   left: 0;
+  // }
 
-  &--max {
-    right: 0;
-
-    .input-range__label-container {
-      left: 50%;
-    }
-  }
+  // &--max {
+  //   right: 0;
+  // }
 
   &--value {
     position: absolute;
     top: -1.8rem;
+    right: 0;
   }
 
   &-container {
-    left: -50%;
+    // left: -50%;
     position: relative;
   }
 
@@ -86,6 +84,12 @@
   &--active {
     background: $color-4;
 
+  }
+
+  & > .input-range__slider-container ~ .input-range__slider-container {
+    .input-range__label {
+      left: -100%;
+    }
   }
 }
 

@@ -5,24 +5,25 @@ import styles from './Checkboxes.module.scss';
 
 class BalconyCheckboxContainer extends React.Component {
   state = {
-      checkedItems: new Map(),
+      checkedBalconyItems: new Map(),
     }
 
   handleChange = (e) => {
     const item = e.target.name;
     const isChecked = e.target.checked;
-    this.setState(prevState => ({ checkedItems: prevState.checkedItems.set(item, isChecked)}));
+    this.setState(prevState => ({ checkedBalconyItems: prevState.checkedBalconyItems.set(item, isChecked)}));
+    this.props.onCheckBoxChange();
     console.log(this.state);
   }
 
-  render() {
+  render(props) {
     return (
       <div className={styles.checkboxesWrapper} >
       {
         balconyCheckboxes.map(item => (
           <label className={styles.checkboxLabel} key={item.key}>
             {item.name}
-            <Checkbox className={styles.checkbox} name={item.name} checked={this.state.checkedItems.get(item.name)} onChange={this.handleChange} />
+            <Checkbox className={styles.checkbox} name={item.name} checked={this.state.checkedBalconyItems.get(item.name)} onChange={this.handleChange} />
           </label>
         ))
       }

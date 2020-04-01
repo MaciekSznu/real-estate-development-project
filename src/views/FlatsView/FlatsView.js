@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./FlatsView.module.scss";
-import CheckboxSearchWrapper from "./SearchInputs/CheckboxSearchWrapper";
 import RangeSearchInputs from "../FlatsView/SearchInputs/RangeSearchInputs";
 import SearchResultsTable from "../../components/SearchResults/SearchResultsTable";
 
@@ -35,10 +34,6 @@ class FlatsView extends React.Component {
     this.setState({filters: {...this.state.filters, selectedPrice}});
   };
 
-  onCheckBoxChange(checked) {
-    this.setState({filters: {checked}});
-  };
-
   // onRangeChange jako props
   render() {
     return (
@@ -51,7 +46,6 @@ class FlatsView extends React.Component {
           onRoomsChange = {this.onRoomsChange}
           onAreaChange = {this.onAreaChange}
           onPriceChange = {this.onPriceChange} />
-          <CheckboxSearchWrapper onCheckBoxChange = {this.onCheckBoxChange}/>
         </div>
         <SearchResultsTable filters={this.state.filters} />
       </div>

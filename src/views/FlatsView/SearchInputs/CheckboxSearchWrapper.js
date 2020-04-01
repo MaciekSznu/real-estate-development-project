@@ -4,11 +4,11 @@ import BalconyCheckboxContainer from "./BalconySearchInput";
 import StatusCheckboxContainer from "./StatusSearchInput";
 
 
-const CheckboxSearchWrapper = () => (
+const CheckboxSearchWrapper = (props) => (
   <>
     <div className={styles.columnWrapper}>
       <h3 className={styles.columnTitle}>Balkon</h3>
-      <BalconyCheckboxContainer />
+      <BalconyCheckboxContainer onCheckBoxChange = {props.onCheckBoxChange} />
     </div>
     <div className={styles.columnWrapper}>
       <h3 className={styles.columnTitle}>Status</h3>

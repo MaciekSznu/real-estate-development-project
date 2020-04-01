@@ -32,8 +32,8 @@ const minAreaValue = Math.min.apply(Math, flatsArray.map(flat => flat.area));
 const maxAreaValue = Math.max.apply(Math, flatsArray.map(flat => flat.area));
 export const areaRange =
   {
-    minValue: 0,
-    maxValue: 100,
+    minValue: minAreaValue,
+    maxValue: maxAreaValue,
     value: {
       min: minAreaValue,
       max: maxAreaValue,
