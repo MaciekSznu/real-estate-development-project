@@ -1,21 +1,14 @@
 @import "../../variables.scss";
+@import "../../mixins.scss";
 
 .investmentViewWrapper {
-  width: 100%;
-  height: auto;
-  padding: 3rem;
+  @include sectionWrapper;
 
   .sectionTitle {
-    color: $color-4;
-    font-family: 'Rubik', sans-serif;
-    font-weight: 700;
-    font-size: 3rem;
+    @include sectionTitle;
   }
 
   .sectionParagraph {
-    color: $color-5;
-    font-family: 'Rubik', sans-serif;
-    font-weight: 300;
-    line-height: 1.5rem;
+    @include sectionParagraph;
   }
 }

@@ -37,7 +37,7 @@ class FlatsView extends React.Component {
   // onRangeChange jako props
   render() {
     return (
-      <div className={styles.flatsViewWrapper}>
+      <div className={styles.flatsViewWrapper} id='mieszkania'>
         <h1 className={styles.sectionTitle}>Mieszkania</h1>
         <h2 className={styles.sectionTitle}>Znajdź swoje wymarzone mieszkanie</h2>
         <div className={styles.flatSearchWrapper}>
