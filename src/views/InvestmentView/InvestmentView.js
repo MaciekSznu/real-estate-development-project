@@ -1,7 +1,11 @@
 import React from "react";
 import styles from "./InvestmentView.module.scss";
 import AwesomeSlider from 'react-awesome-slider';
-import AwesomeSliderStyles from 'react-awesome-slider/src/styles';
+import 'react-awesome-slider/dist/styles.css';
+
+import slide_01 from '../../assets/images/room-4161937_1920.jpg';
+import slide_02 from '../../assets/images/room-4161938_1920.jpg';
+import slide_03 from '../../assets/images/room-4161939_1920.jpg';
 
 const InvestmentView = () => (
   <>
@@ -11,15 +15,15 @@ const InvestmentView = () => (
     <p className={styles.sectionParagraph}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper vel nibh quis finibus. Donec eu tincidunt ante, auctor porta nulla. Integer semper congue lacus non egestas. Curabitur mollis, lorem in convallis dapibus, enim enim fermentum tortor, et hendrerit risus urna nec metus. Aenean lobortis malesuada tortor. Donec egestas finibus varius. Nulla luctus facilisis malesuada. Suspendisse et ex est.</p>
     <p className={styles.sectionParagraph}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper vel nibh quis finibus. Donec eu tincidunt ante, auctor porta nulla. Integer semper congue lacus non egestas. Curabitur mollis, lorem in convallis dapibus, enim enim fermentum tortor, et hendrerit risus urna nec metus. Aenean lobortis malesuada tortor. Donec egestas finibus varius. Nulla luctus facilisis malesuada. Suspendisse et ex est.</p>
   </div>
-  <AwesomeSlider cssModule={AwesomeSliderStyles}>
-    <div data-src='../../assets/images/room-4161937_1920.jpg' >
-      <p>Lalalalalla</p>
+  <AwesomeSlider transitionDelay={100} bullets={false}>
+    <div data-src={slide_01} >
+      <p className={styles.sliderDescription}>Lalalalalla</p>
     </div>
-    <div data-src='../../assets/images/room-4161938_1920.jpg' >
-      <p>Lalalalalla</p>
+    <div data-src={slide_02} >
+      <p className={styles.sliderDescription}>Lalalalalla</p>
     </div>
-    <div data-src='../../assets/images/room-4161939_1920.jpg' >
-      <p>Lalalalalla</p>
+    <div data-src={slide_03} >
+      <p className={styles.sliderDescription}>Lalalalalla</p>
     </div>
   </AwesomeSlider>
   </>

@@ -12,3 +12,8 @@
     @include sectionParagraph;
   }
 }
+
+.sliderDescription {
+  position: relative;
+  z-index: 1;
+}
