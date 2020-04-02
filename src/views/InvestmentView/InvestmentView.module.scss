@@ -3,17 +3,31 @@
 
 .investmentViewWrapper {
   @include sectionWrapper;
+  padding-top: 4rem;
 
-  .sectionTitle {
-    @include sectionTitle;
+  display: flex;
+  justify-content: space-between;
+
+  .investmentViewTextWrapper {
+    // @include sectionWrapper;
+    max-width: 40%;
+  
+    .sectionTitle {
+      @include sectionTitle;
+    }
+  
+    .sectionParagraph {
+      @include sectionParagraph;
+      padding-right: 1rem;
+    }
   }
+  
+  .sliderWrapper {
+    max-width: 60%;
 
-  .sectionParagraph {
-    @include sectionParagraph;
+    .sliderDescription {
+      position: relative;
+      z-index: 1;
+    }
   }
-}
-
-.sliderDescription {
-  position: relative;
-  z-index: 1;
 }
