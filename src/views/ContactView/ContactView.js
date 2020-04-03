@@ -3,14 +3,14 @@ import styles from "./ContactView.module.scss";
 import { ContactMap as Map } from "../../components/Maps/Maps";
 import SiteMap from "../../components/Footer/SiteMap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookSquare, faInstagramSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookSquare, faInstagramSquare, faTwitterSquare, faBuromobelexperte } from '@fortawesome/free-brands-svg-icons';
 
 
 const ContactView = () => (
   <>
     <div className={styles.contactViewWrapper} id='kontakt'>
       <div className={styles.contactViewTextWrapper}>
-        <h2 className={styles.sectionTitle}>Twoje Logo</h2>
+        <h2 className={styles.sectionTitle}><FontAwesomeIcon icon={faBuromobelexperte} />&nbsp; Logo</h2>
         <div className={styles.sectionAdress}>
           <span className={styles.adress}>Miasto</span>
           <span className={styles.adress}>ul. Ulica 123/456</span>

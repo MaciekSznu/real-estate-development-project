@@ -3,7 +3,6 @@
 
 .contactViewWrapper {
   @include sectionWrapper;
-  padding-top: 4rem;
   padding-bottom: 2rem;
   display: flex;
   justify-content: space-between;
@@ -13,7 +12,6 @@
     width: 25%;
     border-right: 1px solid  #6f74a5;
 
-
     .sectionTitle {
       @include sectionTitle;
       margin-top: 0;
@@ -22,6 +20,7 @@
 
     .sectionAdress {
       @include sectionParagraph;
+
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -58,6 +57,7 @@
 
     .sectionTitle {
       @include sectionTitle;
+
       margin-top: 0;
       margin-bottom: 1rem;
       color: $footer-text-color;
@@ -73,6 +73,7 @@
 
 .copyRight {
   @include sectionWrapper;
+  
   background-color: $color-6;
   color: $footer-text-color;
   padding-bottom: .5rem;
