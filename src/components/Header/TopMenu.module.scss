@@ -8,7 +8,7 @@
   height: 60px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -18,26 +18,38 @@
   text-transform: uppercase;
   border-bottom: 1px solid $color-6;
   color: $color-4;
-  z-index: 10;
+  z-index: 1000;
   background-color: $top-menu-bg-color;
 
   .topMenuItem {
-    min-width: 120px;
-    cursor: pointer;
+    display: none;
+  }
+}
 
-    &:hover {
+@media (min-width: 768px) {
+
+  .topMenuWrapper {
+    justify-content: space-evenly;
+    
+    .topMenuItem {
+      display: block;
+      text-align: center;
+      min-width: 120px;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-5;
+        font-weight: 700;
+      }
+    }
+
+    .topMenuItemActive {
+      min-width: 120px;
+      cursor: pointer;
       color: $color-5;
       font-weight: 700;
+      border-bottom: 1px solid $color-5;
     }
-  }
-
-  .topMenuItemActive {
-
-    @extend .topMenuItem;
-
-    color: $color-5;
-    font-weight: 700;
-    border-bottom: 1px solid $color-5;
   }
 }
 
