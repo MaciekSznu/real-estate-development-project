@@ -4,7 +4,6 @@
 .locationViewWrapper {
   @include sectionWrapper;
   padding-top: 4rem;
-
   display: flex;
   justify-content: space-between;
 
@@ -24,6 +23,5 @@
   
   .mapWrapper {
     width: 60%;
-    background: $color-3;
   }
 }

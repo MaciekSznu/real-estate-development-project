@@ -1,0 +1,101 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.contactViewWrapper {
+  @include sectionWrapper;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-6;
+
+  .contactViewTextWrapper {
+    width: 30%;
+    border-right: 1px solid  #6f74a5;
+
+
+    .sectionTitle {
+      @include sectionTitle;
+      margin-top: 0;
+      color: $footer-text-color;
+    }
+
+    .sectionAdress {
+      @include sectionParagraph;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      padding-right: 1rem;
+      color: $footer-text-color;
+      font-size: .8rem;
+
+      .adress, .phone, .email {
+        padding-bottom: .4rem;
+      }
+
+      .phone a, .email a {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+      }
+
+      .email a {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .contactViewSiteMapWrapper {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding-right: 1rem;
+    color: $footer-text-color;
+    font-size: .8rem;
+
+    .sectionTitle {
+      @include sectionTitle;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: $footer-text-color;
+      font-size: inherit;
+      text-transform: uppercase;
+    }
+  }
+
+  .mapWrapper {
+    width: 30%;
+  }
+}
+
+.copyRight {
+  @include sectionWrapper;
+  background-color: $color-6;
+  color: $footer-text-color;
+  padding-bottom: .5rem;
+  padding-top: .5rem;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #6f74a5;
+
+  .copyRightText {
+    font-family: 'Spartan', sans-serif;
+    font-weight: 200;
+    font-size: .8rem;
+  }
+
+  .copyRightIcons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .copyRightIcon {
+      font-size: 1.5rem;
+      margin-left: 1rem;
+      color: $footer-text-color;
+    }
+  }
+}

@@ -17,3 +17,18 @@ export const LocationMap = () => {
   );
 };
 
+export const ContactMap = () => {
+  const position = [50.0381261, 19.9426738];
+  return (
+    <Map center={position} zoom={14} zoomControl={false} >
+      <TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+      />
+      <Marker position={position}>
+        <Popup>Nasze biuro</Popup>
+      </Marker>
+    </Map>
+  );
+};
+
