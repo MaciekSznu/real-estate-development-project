@@ -14,8 +14,8 @@ const ContactView = () => (
         <div className={styles.sectionAdress}>
           <span className={styles.adress}>Miasto</span>
           <span className={styles.adress}>ul. Ulica 123/456</span>
-          <span className={styles.phone}><a href='tel:123-456-789'>123-456-789</a></span>
-          <span className={styles.email}><a href='mailto: adc@def.com'>email</a></span>
+          <span className={styles.phone}><a href='tel:602-755-332'>602-755-332</a></span>
+          <span className={styles.email}><a href='mailto: msznurawa@gmail.com'>email</a></span>
         </div>
       </div>
       <div className={styles.contactViewSiteMapWrapper}>
