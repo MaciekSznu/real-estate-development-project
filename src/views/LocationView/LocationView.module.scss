@@ -3,12 +3,27 @@
 
 .locationViewWrapper {
   @include sectionWrapper;
+  padding-top: 4rem;
 
-  .sectionTitle {
-    @include sectionTitle;
+  display: flex;
+  justify-content: space-between;
+
+  .locationViewTextWrapper {
+    // @include sectionWrapper;
+    max-width: 40%;
+  
+    .sectionTitle {
+      @include sectionTitle;
+    }
+  
+    .sectionParagraph {
+      @include sectionParagraph;
+      padding-right: 1rem;
+    }
   }
-
-  .sectionParagraph {
-    @include sectionParagraph;
+  
+  .mapWrapper {
+    width: 60%;
+    background: $color-3;
   }
 }
