@@ -6,6 +6,17 @@ import styles from './SearchResults.module.scss';
 class SearchResultsTable extends React.Component {
   state = {
     flats: flatsArray,
+    width: 0,
+    height: 0,
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions = () => {
+    this.setState({width: window.innerWidth, height: window.innerHeight});
   }
 
   isBooleanTrue = (item) => {return item === true ? '\u2022' : ''};
@@ -34,11 +45,11 @@ class SearchResultsTable extends React.Component {
             <td>{floor}</td>
             <td>{rooms}</td>
             <td>{area}</td>
-            <td>{this.isBooleanTrue(balcony)}</td>
-            <td>{this.isBooleanTrue(terrace)}</td>
+            { this.state.width > 930 && <td>{this.isBooleanTrue(balcony)}</td> }
+            { this.state.width > 930 && <td>{this.isBooleanTrue(terrace)}</td> }
             <td>{price}</td>
             <td>{status}</td>
-            <td>{chart}</td>
+            { this.state.width > 930 && <td>{chart}</td> }
           </tr>
           )
         })
@@ -46,7 +57,7 @@ class SearchResultsTable extends React.Component {
     }
 
   renderSearchResultsHeader() {
-    const header = {
+    const header = (this.state.width > 930) ? {
       buildingNumber: 'budynek',
       flatNumber: 'mieszkanie',
       floor: 'piętro',
@@ -57,12 +68,20 @@ class SearchResultsTable extends React.Component {
       price: 'cena',
       status: 'status',
       chart: 'karta',
-    }
+    } : {
+      buildingNumber: 'budynek',
+      flatNumber: 'mieszkanie',
+      floor: 'piętro',
+      rooms: 'pokoje',
+      area: 'powierzchnia',
+      price: 'cena',
+      status: 'status',
+    };
 
-    const headerValues = Object.values(header)
+    const headerValues = Object.values(header);
     return headerValues.map((value, index) => {
       return <th key={index}>{value.toUpperCase()}</th>
-    })
+    });
   }
 
   render() {
