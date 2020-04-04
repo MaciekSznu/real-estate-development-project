@@ -45,11 +45,11 @@ class SearchResultsTable extends React.Component {
             <td>{floor}</td>
             <td>{rooms}</td>
             <td>{area}</td>
-            { this.state.width > 930 && <td>{this.isBooleanTrue(balcony)}</td> }
-            { this.state.width > 930 && <td>{this.isBooleanTrue(terrace)}</td> }
+            { this.state.width >= 930 && <td>{this.isBooleanTrue(balcony)}</td> }
+            { this.state.width >= 930 && <td>{this.isBooleanTrue(terrace)}</td> }
             <td>{price}</td>
             <td>{status}</td>
-            { this.state.width > 930 && <td>{chart}</td> }
+            { this.state.width >= 930 && <td>{chart}</td> }
           </tr>
           )
         })
@@ -57,7 +57,7 @@ class SearchResultsTable extends React.Component {
     }
 
   renderSearchResultsHeader() {
-    const header = (this.state.width > 930) ? {
+    const header = (this.state.width >= 930) ? {
       buildingNumber: 'budynek',
       flatNumber: 'mieszkanie',
       floor: 'piętro',
@@ -91,12 +91,14 @@ class SearchResultsTable extends React.Component {
     return (
       <>
         <h2 className={styles.searchResultHeader}>Nasze mieszkania</h2>
-        <table className={styles.searchResultTable}>
-          <tbody>
-            <tr className={styles.searchResultTableHeader}>{this.renderSearchResultsHeader()}</tr>
-            {this.renderSearchResults()}
-          </tbody>
-        </table>
+        <div className={styles.searchResultsTableWrapper}>
+          <table className={styles.searchResultTable}>
+            <tbody>
+              <tr className={styles.searchResultTableHeader}>{this.renderSearchResultsHeader()}</tr>
+              {this.renderSearchResults()}
+            </tbody>
+          </table>
+        </div>
       </>
     )
   }

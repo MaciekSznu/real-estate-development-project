@@ -10,45 +10,110 @@
   text-transform: uppercase;
 }
 
-.searchResultTable {
-  width: 100%;
-  text-align: center;
-  border-collapse: collapse;
-  border-top: 1px solid $color-4;
+.searchResultsTableWrapper {
+  //overflow-x: auto;
 
-  .searchResultTableHeader {
+  .searchResultTable, .searchResultTableHeader, .searchResultTableRow, tbody, th, td {
+    display: block;
 
-    th {
-      color: $color-1;
-      font-family: 'Spartan', sans-serif;
-      font-weight: 400;
-      font-size: .8rem;
-      padding: .5rem;
-      border-bottom: 1px solid $color-4;
-      background-color: rgba($color-4, .2);
-    }
+  }
+
+  .searchResultTableHeader th {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
   }
 
   .searchResultTableRow {
-    
-    cursor: pointer;
-    
-    td {
-    color: $color-4;
-    font-family: 'Spartan', sans-serif;
-    font-weight: 400;
-    font-size: .8rem;
-    padding: .3rem;
-    border-bottom: 1px solid $color-4;
-    }
-  }
-
-  tr:nth-child(even) {
-    background-color: rgba($color-4, .1);
-  }
-
-  tr:hover {
+    border: 1px solid $color-4;
     background-color: rgba($color-4, .2);
+
+    &:not(:last-of-type) { border-bottom: none; }
+
+    &:nth-of-type(odd) { background-color: rgba($color-4, .1) }
+
+    td {
+      position: relative;
+      color: $color-4;
+      font-family: 'Spartan', sans-serif;
+      font-weight: 400;
+      font-size: .8rem;
+      text-align: center;
+      padding: 3px;
+      // padding-left: 200px; // do dopasowania
+      margin-left: 140px; // do dopasowania
+      border-bottom: 1px solid $color-4;
+      border-left: 1px solid $color-4;
+
+
+      &:before {
+        position: absolute;
+        height: 19px;
+        //top: 12px;
+        left: 0;
+        width: 140px;
+        padding: 0 10px;
+        white-space: nowrap;
+        margin-left: -140px;
+        text-align: right;
+        border-bottom: 1px solid $color-4;
+      }
+    }
+
+    td:last-of-type { border-bottom: none; }
+
+    td:nth-of-type(1):before { content: "Budynek"; }
+    td:nth-of-type(2):before { content: "Mieszkanie"; }
+    td:nth-of-type(3):before { content: "Piętro"; }
+    td:nth-of-type(4):before { content: "Pokoje"; }
+    td:nth-of-type(5):before { content: "Powierzchnia"; }
+    td:nth-of-type(6):before { content: "Cena"; }
+    td:nth-of-type(7):before { content: "Status"; border-bottom: none; }
+
+  }
+
+  @media (min-width: 720px) {
+    .searchResultTable {
+      width: 100%;
+      text-align: center;
+      border-collapse: collapse;
+      border-top: 1px solid $color-4;
+
+      .searchResultTableHeader {
+
+        th {
+          color: $color-1;
+          font-family: 'Spartan', sans-serif;
+          font-weight: 400;
+          font-size: .8rem;
+          padding: .5rem;
+          border-bottom: 1px solid $color-4;
+          background-color: rgba($color-4, .2);
+        }
+      }
+
+      .searchResultTableRow {
+        
+        cursor: pointer;
+        
+        td {
+        color: $color-4;
+        font-family: 'Spartan', sans-serif;
+        font-weight: 400;
+        font-size: .8rem;
+        padding: .3rem;
+        border-bottom: 1px solid $color-4;
+        }
+      }
+
+      tr:nth-child(even) {
+        background-color: rgba($color-4, .1);
+      }
+
+      tr:hover {
+        background-color: rgba($color-4, .2);
+      }
+    }
   }
 }
 
