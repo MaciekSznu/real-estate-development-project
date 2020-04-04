@@ -5,7 +5,7 @@ import '../../views/Root/index.css';
 export const LocationMap = () => {
   const position = [50.0341625, 19.8990923];
   return (
-    <Map center={position} zoom={16}>
+    <Map center={position} zoom={16} zoomControl={false}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -24,7 +24,7 @@ export const ContactMap = () => {
     [50.05, 19.97]
   ];
   return (
-    <Map center={position} zoom={14} zoomControl={false} >
+    <Map center={position} zoom={14} zoomControl={false}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
