@@ -5,7 +5,7 @@ import '../../views/Root/index.css';
 export const LocationMap = () => {
   const position = [50.0341625, 19.8990923];
   return (
-    <Map center={position} zoom={16} zoomControl={false}>
+    <Map center={position} zoom={16}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
