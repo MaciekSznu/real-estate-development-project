@@ -21,25 +21,31 @@ class SearchResultsTable extends React.Component {
 
   isBooleanTrue = (item) => {return item === true ? '\u2022' : ''};
 
-  renderSearchResults(props) {
+  filterFlatsArray(props) {
     return (
-        this.state.flats.filter((el) => {
-          return el.floor <= (this.props.filters.selectedFloors.max !== undefined ? this.props.filters.selectedFloors.max : maxFloorValue) &&
-                 el.floor >= (this.props.filters.selectedFloors.min !== undefined ? this.props.filters.selectedFloors.min : minFloorValue) &&
-                 el.rooms <= (this.props.filters.selectedRooms.max !== undefined ? this.props.filters.selectedRooms.max : maxRoomsValue) &&
-                 el.rooms >= (this.props.filters.selectedRooms.min !== undefined ? this.props.filters.selectedRooms.min : minRoomsValue) &&
-                 el.area <= (this.props.filters.selectedArea.max !== undefined ? this.props.filters.selectedArea.max : maxAreaValue) &&
-                 el.area >= (this.props.filters.selectedArea.min !== undefined ? this.props.filters.selectedArea.min : minAreaValue) &&
-                 el.price <= (this.props.filters.selectedPrice.max !== undefined ? this.props.filters.selectedPrice.max : maxPriceValue) &&
-                 el.price >= (this.props.filters.selectedPrice.min !== undefined ? this.props.filters.selectedPrice.min : minPriceValue) &&
-                 el.balcony !== '' &&
-                 el.terrace !== '' &&
-                 el.status === 'for sale'
-        })
-        .map((flat, index) => {
+      this.state.flats.filter((el) => {
+        return el.floor <= (this.props.filters.selectedFloors.max !== undefined ? this.props.filters.selectedFloors.max : maxFloorValue) &&
+               el.floor >= (this.props.filters.selectedFloors.min !== undefined ? this.props.filters.selectedFloors.min : minFloorValue) &&
+               el.rooms <= (this.props.filters.selectedRooms.max !== undefined ? this.props.filters.selectedRooms.max : maxRoomsValue) &&
+               el.rooms >= (this.props.filters.selectedRooms.min !== undefined ? this.props.filters.selectedRooms.min : minRoomsValue) &&
+               el.area <= (this.props.filters.selectedArea.max !== undefined ? this.props.filters.selectedArea.max : maxAreaValue) &&
+               el.area >= (this.props.filters.selectedArea.min !== undefined ? this.props.filters.selectedArea.min : minAreaValue) &&
+               el.price <= (this.props.filters.selectedPrice.max !== undefined ? this.props.filters.selectedPrice.max : maxPriceValue) &&
+               el.price >= (this.props.filters.selectedPrice.min !== undefined ? this.props.filters.selectedPrice.min : minPriceValue) &&
+               el.balcony !== '' &&
+               el.terrace !== '' &&
+               el.status === 'for sale'
+      })
+    )
+  }
+
+  renderSearchResults() {
+    console.log(this.filterFlatsArray().length);
+    return (
+        this.filterFlatsArray().map((flat, index) => {
         const {buildingNumber, flatNumber, floor, rooms, area, balcony, terrace, price, status, chart} = flat
         return (
-          <tr className={styles.searchResultTableRow} key={flatNumber}>
+          <tr className={styles.searchResultTableRow} key={index}>
             <td>{buildingNumber}</td>
             <td>{flatNumber}</td>
             <td>{floor}</td>
@@ -48,13 +54,41 @@ class SearchResultsTable extends React.Component {
             { this.state.width >= 930 && <td>{this.isBooleanTrue(balcony)}</td> }
             { this.state.width >= 930 && <td>{this.isBooleanTrue(terrace)}</td> }
             <td>{price}</td>
-            <td>{status}</td>
-            { this.state.width >= 930 && <td>{chart}</td> }
+            { this.state.width >= 930 && <td>{status}</td> }
+            <td>{chart}</td>
           </tr>
           )
         })
-      )
-    }
+    );
+  }
+
+  renderPagination() {
+    const numberOfflats = this.filterFlatsArray().length;
+    const perPage = (this.state.width >= 720) ? 5 : 3;
+    const pages = Math.ceil(numberOfflats / perPage);
+    const pagesNumbersArray = [...Array(pages).keys()].map(i => ++i);
+    console.log(this.filterFlatsArray());
+    console.log(pagesNumbersArray);
+
+
+
+    // const changePage = () => {
+
+    // const from = pagesNumbersArray[i-1]*perPage;
+    // const to = pagesNumbersArray[i]*perPage;
+
+    //   this.filterFlatsArray().slice(from, to);
+    // }
+
+
+    return (
+
+      pagesNumbersArray.map((value, index) => {
+        return <span key={index} onClick={console.log(value)}>{value}</span>
+        })
+    );
+  }
+
 
   renderSearchResultsHeader() {
     const header = (this.state.width >= 930) ? {
@@ -75,7 +109,7 @@ class SearchResultsTable extends React.Component {
       rooms: 'pokoje',
       area: 'powierzchnia',
       price: 'cena',
-      status: 'status',
+      chart: 'karta',
     };
 
     const headerValues = Object.values(header);
@@ -99,6 +133,7 @@ class SearchResultsTable extends React.Component {
             </tbody>
           </table>
         </div>
+        <div>{this.renderPagination()}</div>
       </>
     )
   }

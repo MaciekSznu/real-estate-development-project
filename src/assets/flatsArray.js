@@ -9,7 +9,7 @@ const flatsArray = [
     balcony: false,
     terrace: true,
     status: 'for sale',
-    chart: '',
+    chart: 'link',
   },
   {
     buildingNumber: 1,
@@ -21,7 +21,7 @@ const flatsArray = [
     balcony: false,
     terrace: false,
     status: 'for sale',
-    chart: '',
+    chart: 'link',
   },{
     buildingNumber: 1,
     flatNumber: 3,
@@ -32,7 +32,7 @@ const flatsArray = [
     balcony: false,
     terrace: true,
     status: 'for sale',
-    chart: '',
+    chart: 'link',
   },{
     buildingNumber: 1,
     flatNumber: 4,
@@ -43,7 +43,7 @@ const flatsArray = [
     balcony: false,
     terrace: true,
     status: 'for sale',
-    chart: '',
+    chart: 'link',
   },{
     buildingNumber: 1,
     flatNumber: 5,
@@ -54,7 +54,7 @@ const flatsArray = [
     balcony: true,
     terrace: false,
     status: 'for sale',
-    chart: '',
+    chart: 'link',
   },{
     buildingNumber: 1,
     flatNumber: 6,
@@ -65,7 +65,7 @@ const flatsArray = [
     balcony: false,
     terrace: false,
     status: 'for sale',
-    chart: '',
+    chart: 'link',
   },{
     buildingNumber: 1,
     flatNumber: 7,
@@ -76,7 +76,7 @@ const flatsArray = [
     balcony: true,
     terrace: false,
     status: 'for sale',
-    chart: '',
+    chart: 'link',
   },{
     buildingNumber: 1,
     flatNumber: 8,
@@ -87,7 +87,7 @@ const flatsArray = [
     balcony: true,
     terrace: false,
     status: 'for sale',
-    chart: '',
+    chart: 'link',
   },{
     buildingNumber: 1,
     flatNumber: 9,
@@ -98,7 +98,7 @@ const flatsArray = [
     balcony: true,
     terrace: false,
     status: 'for sale',
-    chart: '',
+    chart: 'link',
   },{
     buildingNumber: 1,
     flatNumber: 10,
@@ -109,7 +109,7 @@ const flatsArray = [
     balcony: false,
     terrace: false,
     status: 'for sale',
-    chart: '',
+    chart: 'link',
   },{
     buildingNumber: 1,
     flatNumber: 11,
@@ -120,7 +120,7 @@ const flatsArray = [
     balcony: true,
     terrace: false,
     status: 'for sale',
-    chart: '',
+    chart: 'link',
   },{
     buildingNumber: 1,
     flatNumber: 12,
@@ -131,7 +131,7 @@ const flatsArray = [
     balcony: true,
     terrace: false,
     status: 'for sale',
-    chart: '',
+    chart: 'link',
   },{
     buildingNumber: 1,
     flatNumber: 13,
@@ -142,7 +142,7 @@ const flatsArray = [
     balcony: true,
     terrace: false,
     status: 'for sale',
-    chart: '',
+    chart: 'link',
   },{
     buildingNumber: 1,
     flatNumber: 14,
@@ -153,7 +153,7 @@ const flatsArray = [
     balcony: false,
     terrace: false,
     status: 'for sale',
-    chart: '',
+    chart: 'link',
   },{
     buildingNumber: 1,
     flatNumber: 15,
@@ -164,7 +164,7 @@ const flatsArray = [
     balcony: true,
     terrace: false,
     status: 'for sale',
-    chart: '',
+    chart: 'link',
   },{
     buildingNumber: 1,
     flatNumber: 16,
@@ -175,7 +175,7 @@ const flatsArray = [
     balcony: true,
     terrace: false,
     status: 'for sale',
-    chart: '',
+    chart: 'link',
   },
   {
     buildingNumber: 1,
@@ -187,7 +187,7 @@ const flatsArray = [
     balcony: true,
     terrace: false,
     status: 'for sale',
-    chart: '',
+    chart: 'link',
   },{
     buildingNumber: 1,
     flatNumber: 18,
@@ -198,7 +198,7 @@ const flatsArray = [
     balcony: false,
     terrace: false,
     status: 'for sale',
-    chart: '',
+    chart: 'link',
   },{
     buildingNumber: 1,
     flatNumber: 19,
@@ -209,7 +209,7 @@ const flatsArray = [
     balcony: true,
     terrace: false,
     status: 'for sale',
-    chart: '',
+    chart: 'link',
   },{
     buildingNumber: 1,
     flatNumber: 20,
@@ -220,7 +220,7 @@ const flatsArray = [
     balcony: true,
     terrace: false,
     status: 'for sale',
-    chart: '',
+    chart: 'link',
   },
 ];
 
