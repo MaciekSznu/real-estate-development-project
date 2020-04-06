@@ -1,6 +1,7 @@
 import React from 'react';
 import flatsArray from '../../assets/flatsArray';
 import { minFloorValue, maxFloorValue, minAreaValue, maxAreaValue, minRoomsValue, maxRoomsValue, minPriceValue, maxPriceValue } from '../Ranges/RangesData';
+import Pagination from '../Pagination/Pagination';
 import styles from './SearchResults.module.scss';
 
 class SearchResultsTable extends React.Component {
@@ -8,6 +9,7 @@ class SearchResultsTable extends React.Component {
     flats: flatsArray,
     width: 0,
     height: 0,
+    page: 1,
   }
 
   componentDidMount() {
@@ -40,55 +42,26 @@ class SearchResultsTable extends React.Component {
   }
 
   renderSearchResults() {
-    console.log(this.filterFlatsArray().length);
     return (
-        this.filterFlatsArray().map((flat, index) => {
-        const {buildingNumber, flatNumber, floor, rooms, area, balcony, terrace, price, status, chart} = flat
-        return (
-          <tr className={styles.searchResultTableRow} key={index}>
-            <td>{buildingNumber}</td>
-            <td>{flatNumber}</td>
-            <td>{floor}</td>
-            <td>{rooms}</td>
-            <td>{area}</td>
-            { this.state.width >= 930 && <td>{this.isBooleanTrue(balcony)}</td> }
-            { this.state.width >= 930 && <td>{this.isBooleanTrue(terrace)}</td> }
-            <td>{price}</td>
-            { this.state.width >= 930 && <td>{status}</td> }
-            <td>{chart}</td>
-          </tr>
-          )
-        })
+      this.filterFlatsArray().map((flat) => {
+      const {buildingNumber, flatNumber, floor, rooms, area, balcony, terrace, price, status, chart} = flat
+      return (
+        <>
+          <td>{buildingNumber}</td>
+          <td>{flatNumber}</td>
+          <td>{floor}</td>
+          <td>{rooms}</td>
+          <td>{area}{' m2'}</td>
+          { this.state.width >= 930 && <td>{this.isBooleanTrue(balcony)}</td> }
+          { this.state.width >= 930 && <td>{this.isBooleanTrue(terrace)}</td> }
+          <td>{price}{' zł'}</td>
+          { this.state.width >= 930 && <td>{status}</td> }
+          <td>{chart}</td>
+        </>
+        )
+      })
     );
   }
-
-  renderPagination() {
-    const numberOfflats = this.filterFlatsArray().length;
-    const perPage = (this.state.width >= 720) ? 5 : 3;
-    const pages = Math.ceil(numberOfflats / perPage);
-    const pagesNumbersArray = [...Array(pages).keys()].map(i => ++i);
-    console.log(this.filterFlatsArray());
-    console.log(pagesNumbersArray);
-
-
-
-    // const changePage = () => {
-
-    // const from = pagesNumbersArray[i-1]*perPage;
-    // const to = pagesNumbersArray[i]*perPage;
-
-    //   this.filterFlatsArray().slice(from, to);
-    // }
-
-
-    return (
-
-      pagesNumbersArray.map((value, index) => {
-        return <span key={index} onClick={console.log(value)}>{value}</span>
-        })
-    );
-  }
-
 
   renderSearchResultsHeader() {
     const header = (this.state.width >= 930) ? {
@@ -118,9 +91,18 @@ class SearchResultsTable extends React.Component {
     });
   }
 
+
   render() {
-    // this.props.filter - propsy z wartościami przefiltrowanymi
-    console.log(this.props);
+    const numberOfflats = this.filterFlatsArray().length;
+    const perPage = (this.state.width >= 720) ? 5 : 4;
+    const pages = Math.ceil(numberOfflats / perPage);
+    const from = (this.state.page - 1) * perPage;
+    const to = (this.state.page * perPage);;
+    const flats = this.renderSearchResults();
+
+    const flatsToShow = flats.slice(from, to).map((item, index) => {
+      return <tr className={styles.searchResultTableRow} key={index}>{item}</tr>
+    });
 
     return (
       <>
@@ -129,11 +111,11 @@ class SearchResultsTable extends React.Component {
           <table className={styles.searchResultTable}>
             <tbody>
               <tr className={styles.searchResultTableHeader}>{this.renderSearchResultsHeader()}</tr>
-              {this.renderSearchResults()}
+              {flatsToShow}
             </tbody>
           </table>
         </div>
-        <div>{this.renderPagination()}</div>
+        <Pagination pages={pages} onPageChange={(page) => {this.setState({page: page})}} />
       </>
     )
   }

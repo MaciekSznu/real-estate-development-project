@@ -80,24 +80,24 @@
         position: relative;
         color: $color-4;
         font-family: 'Spartan', sans-serif;
-        font-weight: 400;
-        font-size: .8rem;
+        font-weight: 500;
+        font-size: .7rem;
         text-align: center;
         padding: 3px;
         // padding-left: 200px; // do dopasowania
-        margin-left: 140px; // do dopasowania
+        margin-left: 120px; // do dopasowania
         border-bottom: 1px solid $color-4;
         border-left: 1px solid $color-4;
 
 
         &:before {
           position: absolute;
-          height: 19px;
+          height: 18px;
           left: 0;
-          width: 140px;
+          width: 120px;
           padding: 0 10px;
           white-space: nowrap;
-          margin-left: -140px;
+          margin-left: -120px;
           text-align: right;
           border-bottom: 1px solid $color-4;
         }
