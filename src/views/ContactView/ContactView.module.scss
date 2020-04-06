@@ -9,8 +9,7 @@
   background-color: $color-6;
 
   .contactViewTextWrapper {
-    width: 25%;
-    border-right: 1px solid  #6f74a5;
+    width: 100%;
 
     .sectionTitle {
       @include sectionTitle;
@@ -46,28 +45,57 @@
   }
 
   .contactViewSiteMapWrapper {
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    padding-right: 1rem;
-    color: $footer-text-color;
-    font-size: .8rem;
-
-    .sectionTitle {
-      @include sectionTitle;
-
-      margin-top: 0;
-      margin-bottom: 1rem;
-      color: $footer-text-color;
-      font-size: inherit;
-      text-transform: uppercase;
-    }
+    display: none
   }
 
   .mapWrapper {
-    width: 40%;
+    display: none;
+  }
+
+  @media (min-width: 440px) {
+
+    .contactViewTextWrapper {
+      width: 50%;
+      border-right: 1px solid  #6f74a5;
+    }
+
+    .contactViewSiteMapWrapper {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      padding-right: 1rem;
+      color: $footer-text-color;
+      font-size: .8rem;
+  
+      .sectionTitle {
+        @include sectionTitle;
+  
+        margin-top: 0;
+        margin-bottom: 1rem;
+        color: $footer-text-color;
+        font-size: inherit;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+
+    .contactViewTextWrapper {
+      width: 25%;
+    }
+
+    .contactViewSiteMapWrapper {
+      width: 25%;
+    }
+
+    .mapWrapper {
+      display: block;
+      width: 40%;
+      max-width: 500px;
+    }
   }
 }
 

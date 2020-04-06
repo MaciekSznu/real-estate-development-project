@@ -8,6 +8,11 @@
     @include sectionTitle;
   }
 
+  .sectionSubTitle {
+    @include sectionSubTitle;
+    margin-bottom: .5rem;
+  }
+
   .sectionParagraph {
     @include sectionParagraph;
   }

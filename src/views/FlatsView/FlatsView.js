@@ -39,7 +39,7 @@ class FlatsView extends React.Component {
     return (
       <div className={styles.flatsViewWrapper} id='mieszkania'>
         <h1 className={styles.sectionTitle}>Mieszkania</h1>
-        <h2 className={styles.sectionTitle}>Znajdź swoje wymarzone mieszkanie</h2>
+        <h2 className={styles.sectionSubTitle}>Znajdź swoje wymarzone mieszkanie</h2>
         <div className={styles.flatSearchWrapper}>
           <RangeSearchInputs
           onFloorChange = {this.onFloorChange}
