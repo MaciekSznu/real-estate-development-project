@@ -85,7 +85,7 @@
 
     max-width: 100vw;
     width: 100vw;
-    padding: 3rem calc((100vw - 1360px) / 2 + 3rem) 1rem;
+    padding-bottom: 1rem;
 
     .contactViewTextWrapper {
       width: 25%;
@@ -101,6 +101,10 @@
       max-width: 500px;
     }
   }
+
+  @media (min-width: 1360px) {
+    padding: 3rem calc((100vw - 1360px) / 2 + 3rem) 1rem;
+  }
 }
 
 .copyRight {
@@ -110,13 +114,16 @@
   width: 100vw;
   background-color: $color-6;
   color: $footer-text-color;
-  padding-bottom: .5rem;
-  padding-top: .5rem;
+  padding: .5rem 3rem .5rem 2rem;
   display: flex;
   justify-content: space-between;
   border-top: 1px solid #6f74a5;
 
   @media (min-width: 768px) {
+    padding: .5rem 3rem .5rem;
+  }
+
+  @media (min-width: 1360px) {
     padding: .5rem calc((100vw - 1360px) / 2 + 3rem) .5rem;
   }
 

@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./TopMenu.module.scss";
 import { Link } from 'react-scroll';
 import Hamburger from "./TopMenuHamburger";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
 
 
 class TopMenu extends React.Component {
@@ -60,6 +62,11 @@ class TopMenu extends React.Component {
         </>
         }
         </ul>
+        <div className={styles.scrollToTop}>
+          <Link to='inwestycja' smooth={true} duration={1000}>
+            <span className={styles.scrollToTopIcon}><FontAwesomeIcon icon={faAngleDoubleUp} /></span>
+          </Link>
+        </div>
       </>
     );
   }

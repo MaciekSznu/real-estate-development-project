@@ -67,3 +67,24 @@
     justify-content: space-between;
   }
 }
+
+.scrollToTop {
+  position: fixed;
+  bottom: 60px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background-color: rgba($color-4, .3);
+  border: 1px solid rgba($footer-text-color, .6);
+  z-index: 1001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  .scrollToTopIcon {
+    color: rgba($color-3, .6);
+    font-size: 1.5rem;
+  }
+
+}
