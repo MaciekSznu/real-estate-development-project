@@ -94,7 +94,7 @@ class SearchResultsTable extends React.Component {
 
   render() {
     const numberOfflats = this.filterFlatsArray().length;
-    const perPage = (this.state.width >= 720) ? 5 : 4;
+    const perPage = (this.state.width >= 720) ? 10 : 4;
     const pages = Math.ceil(numberOfflats / perPage);
     const from = (this.state.page - 1) * perPage;
     const to = (this.state.page * perPage);;

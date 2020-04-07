@@ -1,0 +1,16 @@
+// @import './InvestmentSlider.css';
+
+.sliderWrapper {
+  max-width: 100%;
+
+  .sliderDescription {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .sliderWrapper {
+    max-width: 60%;
+  }
+}
