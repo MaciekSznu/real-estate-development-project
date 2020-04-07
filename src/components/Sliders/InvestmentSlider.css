@@ -14,7 +14,7 @@
 .awssld {
   --organic-arrow-thickness: 2px;
   --organic-arrow-height: 30px;
-  --slider-height-percentage: 60%;
+  --slider-height-percentage: 40%;
   --loader-bar-color: #000040;
   --loader-bar-height: 3px;
   --control-button-width: 10%;
@@ -40,6 +40,7 @@
     overflow: hidden;
     position: relative;
     height: 100%;
+    min-height: 350px;
     width: 100%; }
   .awssld__container {
     display: block;

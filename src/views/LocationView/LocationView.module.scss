@@ -5,11 +5,12 @@
   @include sectionWrapper;
   padding-top: 4rem;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   .locationViewTextWrapper {
-    // @include sectionWrapper;
-    max-width: 40%;
+    max-width: 100%;
   
     .sectionTitle {
       @include sectionTitle;
@@ -17,11 +18,12 @@
   
     .sectionParagraph {
       @include sectionParagraph;
-      padding-right: 1rem;
+      // padding-right: 1rem;
     }
   }
   
   .mapWrapper {
-    width: 60%;
+    width: 100%;
+    height: 400px;
   }
 }

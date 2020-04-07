@@ -10,7 +10,6 @@
   align-items: center;
 
   .investmentViewTextWrapper {
-    // @include sectionWrapper;
     max-width: 100%;
   
     .sectionTitle {
@@ -25,6 +24,7 @@
 
   .sliderWrapper {
     max-width: 100%;
+    height: 500px;
 
     .sliderDescription {
       position: relative;
@@ -32,32 +32,18 @@
     }
   }
 
-  @media (min-width: 1280px) {
+  // @media (min-width: 1280px) {
 
-    flex-direction: row;
-    justify-content: space-between;
+  //   flex-direction: row;
+  //   justify-content: space-between;
 
-    .investmentViewTextWrapper {
-      // @include sectionWrapper;
-      max-width: 40%;
+  //   .investmentViewTextWrapper {
+  //     max-width: 40%;
+  //     padding-right: 2rem;
+  //   }
     
-      // .sectionTitle {
-      //   @include sectionTitle;
-      // }
-    
-      // .sectionParagraph {
-      //   @include sectionParagraph;
-      //   padding-right: 1rem;
-      // }
-    }
-    
-    .sliderWrapper {
-      max-width: 60%;
-
-      // .sliderDescription {
-      //   position: relative;
-      //   z-index: 1;
-      // }
-    }
-  }
+  //   .sliderWrapper {
+  //     max-width: 60%;
+  //   }
+  // }
 }
