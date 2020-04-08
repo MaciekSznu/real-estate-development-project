@@ -40,7 +40,7 @@ const Counters = () => {
       <div className={styles.counterItem}>
         <CountUp end={counter.end} duration={counter.duration} suffix={counter.suffix}>
             {({ countUpRef, start }) => (
-                <VisibilitySensor onChange={start} delayedCall>
+                <VisibilitySensor onChange={start} offset={{top: -100, bottom: -100}} delayedCall>
                     <span className={styles.counterNumbers} ref={countUpRef} />
                 </VisibilitySensor>
             )}
