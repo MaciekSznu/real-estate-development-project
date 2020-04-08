@@ -4,9 +4,9 @@
   display: block;
   min-width: 120px;
   min-height: 30px;
+  padding-top: .5rem;
   cursor: pointer;
-  margin-right: 2rem;
-  text-align: right;
+  text-align: center;
 
   &:hover {
     color: $color-5;
@@ -25,7 +25,6 @@
 @media (min-width: 768px) {
 
   .topMenuItem {
-    text-align: center;
     margin-right: 0;
   }
 }

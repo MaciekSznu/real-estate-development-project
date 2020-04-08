@@ -33,11 +33,11 @@ const countersParameters = [
 const Counters = () => {
 
   const parameters = countersParameters;
-
+ 
   return (
   <>
-    {parameters.map(counter =>
-      <div className={styles.counterItem}>
+    {parameters.map((counter, index) =>
+      <div className={styles.counterItem} key={index}>
         <CountUp end={counter.end} duration={counter.duration} suffix={counter.suffix}>
             {({ countUpRef, start }) => (
                 <VisibilitySensor onChange={start} offset={{top: -100, bottom: -100}} delayedCall>
