@@ -1,0 +1,15 @@
+.counterItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .counterNumbers {
+    font-size: 3rem;
+  }
+  .counterDescription {
+    font-size: 1.5rem;
+    margin: 0;
+    padding-top: 1rem;
+  }
+}
