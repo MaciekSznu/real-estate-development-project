@@ -1,15 +1,21 @@
+@import '../../mixins.scss';
+
 .counterItem {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: .5rem;
+  font-family: Spartan;
 
   .counterNumbers {
-    font-size: 3rem;
+    @include sectionSubTitle;
+    font-size: 2rem;
   }
   .counterDescription {
-    font-size: 1.5rem;
+    @include sectionParagraph;
     margin: 0;
-    padding-top: 1rem;
+    padding-top: .8rem;
+    text-transform: uppercase;
   }
 }
