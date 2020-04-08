@@ -1,14 +1,14 @@
 @import "../../variables.scss";
-
-.topMenuWrapper {
+ 
+.topMenuWrapperMobileHidden {
   position: fixed;
-  top: 0;
+  top: -150px;
   right: 0;
   width: 100%;
-  min-height: 42px;
-  height: auto;
+  height: 192px;
+  //height: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: space-between;
   align-items: flex-end;
   margin: 0;
@@ -21,48 +21,29 @@
   color: $color-4;
   z-index: 1001;
   background-color: $top-menu-bg-color;
-
-  .topMenuItem {
-    display: block;
-    min-width: 120px;
-    min-height: 30px;
-    cursor: pointer;
-    margin-right: 2rem;
-    text-align: right;
-
-    &:hover {
-      color: $color-5;
-      font-weight: 700;
-    }
-  }
-
-  .topMenuItemActive {
-    min-width: 120px;
-    cursor: pointer;
-    color: $color-5;
-    font-weight: 700;
-    border-bottom: 1px solid $color-5;
-  }
+  transition: transform 1s;
 }
 
-@media (min-width: 768px) {
-
-  .topMenuWrapper {
-    padding: 0 calc((100vw - 1360px) / 2 + 3rem);
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 60px;
-
-    .topMenuItem {
-      text-align: center;
-      margin-right: 0;
-    }
-  }
+.topMenuWrapperMobileOpen {
+  @extend .topMenuWrapperMobileHidden;
+  flex-direction: column;
+  transform: translateY(150px);
+  transition: transform 1s;
+  border-bottom: none;
 }
+
+
+.topMenuWrapper {
+  @extend .topMenuWrapperMobileHidden;
+  top: 0;
+  padding: 0 calc((100vw - 1360px) / 2 + 3rem);
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60px;
+  }
 
 @media (min-width: 1360px) {
-
   .topMenuWrapper {
     justify-content: space-between;
   }
@@ -86,5 +67,4 @@
     color: rgba($color-3, .6);
     font-size: 1.5rem;
   }
-
 }

@@ -4,6 +4,7 @@ import { Link } from 'react-scroll';
 import Hamburger from "./TopMenuHamburger";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
+import TopMenuItems from "./TopMenuItems";
 
 
 class TopMenu extends React.Component {
@@ -33,34 +34,30 @@ class TopMenu extends React.Component {
 
   render() {
 
+    const mobileMenuHidden = (!this.state.displayMobileMenu && this.state.width < 768);
+    const mobileMenuOpen = (this.state.displayMobileMenu && this.state.width < 768);
+    const desktopMenuOpen = (this.state.width >= 768);
+
+    const topMenuWrapperStyle = () => {
+      if (mobileMenuHidden) {
+        return styles.topMenuWrapperMobileHidden;
+      } else if (mobileMenuOpen) {
+        return styles.topMenuWrapperMobileOpen;
+      } else {
+        return styles.topMenuWrapper;
+      }
+    };
+
     return (
       <>
-        <ul className={styles.topMenuWrapper}>
-          { !this.state.displayMobileMenu && this.state.width < 768 &&
+        <ul className={topMenuWrapperStyle()}>
+          { mobileMenuHidden &&
             <Hamburger className={styles.topMenuHamburger} openMobileMenu={this.openMobileMenu} isOpen={this.state.displayMobileMenu}/>
           }
-          { this.state.displayMobileMenu && this.state.width < 768 &&
+          { mobileMenuOpen &&
             <Hamburger className={styles.topMenuHamburger} openMobileMenu={this.openMobileMenu} isOpen={this.state.displayMobileMenu}/>
           }
-          { ((this.state.width >= 768) || ((this.state.width < 768 && this.state.displayMobileMenu))) &&
-          <>
-          <li>
-            <Link to='inwestycja' spy={true} hashSpy={true} smooth={true} duration={500} className={styles.topMenuItem} activeClass={styles.topMenuItemActive}>Inwestycja</Link>
-          </li>
-          <li>
-            <Link to='lokalizacja' spy={true} hashSpy={true} smooth={true} duration={500} className={styles.topMenuItem} activeClass={styles.topMenuItemActive}>Lokalizacja</Link>
-          </li>
-          <li>
-            <Link to='mieszkania' spy={true} hashSpy={true} smooth={true} duration={500} className={styles.topMenuItem} activeClass={styles.topMenuItemActive}>Mieszkania</Link>
-          </li>
-          <li>
-            <Link to='inwestor' spy={true} hashSpy={true} smooth={true} duration={500} className={styles.topMenuItem} activeClass={styles.topMenuItemActive}>Inwestor</Link>
-          </li>
-          <li>
-            <Link to='kontakt' spy={true} hashSpy={true} smooth={true} duration={500} className={styles.topMenuItem} activeClass={styles.topMenuItemActive}>Kontakt</Link>
-          </li>
-        </>
-        }
+          { (desktopMenuOpen || mobileMenuOpen) && <TopMenuItems/> }
         </ul>
         <div className={styles.scrollToTop}>
           <Link to='inwestycja' smooth={true} duration={1000}>
