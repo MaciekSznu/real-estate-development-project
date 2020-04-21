@@ -1,16 +1,61 @@
 @import '../../mixins.scss';
+@import '../../variables.scss';
 
 .counterItem {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: .5rem;
-  font-family: Spartan;
+  max-width: 100%;
+  min-height: 150px;
+  padding: 2rem 2.5rem;
+  font-family: 'Spartan', sans-serif;
+  margin-bottom: 1rem;
+
+  &:nth-child(odd) {
+    background-color: rgba($color-4, .9);
+    color: $footer-text-color;
+  }
+  &:nth-child(even) {
+    background-color: rgba($color-4, .05);
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 768px) {
+    width: 50%;
+
+    &:nth-child(3) {
+      order: 2
+    }
+
+    &:last-child {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media (min-width: 1360px) {
+    width: 25%;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    // &:nth-child(2), &:nth-child(3) {
+    //   margin: 0 .5rem 1rem;
+    // }
+    
+    &:nth-child(4) {
+      order: 2;
+    }
+  }
 
   .counterNumbers {
     @include sectionSubTitle;
+    font-weight: 500;
     font-size: 2rem;
+    color: inherit;
   }
   .counterDescription {
     @include sectionParagraph;
@@ -18,5 +63,7 @@
     margin: 0;
     padding-top: .8rem;
     text-transform: uppercase;
+    text-align: center;
+    color: inherit;
   }
 }
