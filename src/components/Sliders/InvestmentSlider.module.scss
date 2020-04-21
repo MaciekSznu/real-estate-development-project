@@ -1,14 +1,24 @@
+@import '../../variables.scss';
+
 .sliderWrapper {
+  margin-top: 1rem;
   max-width: 100%;
 
   .sliderDescription {
-    position: relative;
+    font-family: "Spartan", sans-serif;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2rem;
+    width: 100%;
     z-index: 1;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+
+    @media (min-width: 1280px) {
+      font-size: 4rem;
+    }
   }
 }
 
-@media (min-width: 1280px) {
-  .sliderWrapper {
-    max-width: 60%;
-  }
-}

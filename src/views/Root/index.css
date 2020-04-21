@@ -30,8 +30,29 @@ body {
   align-items: center;
 }
 
+/* MAPS */
 .leaflet-container {
   width: 100%;
   height: 100%;
 }
+
+.leaflet-popup-content-wrapper {
+  border-radius: 10px;
+}
+
+.leaflet-popup-content {
+  font-family: "Spartan", sans-serif;
+  font-weight: 500;
+  margin: 8px 12px;
+}
+
+.leaflet-popup-close-button {
+  display: none;
+}
+
+.location-icon {
+  /* filter: invert(10%) sepia(8%) saturate(7482%) hue-rotate(212deg) brightness(107%) contrast(119%); */
+  opacity: .7;
+}
+
 

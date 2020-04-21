@@ -106,7 +106,7 @@ class SearchResultsTable extends React.Component {
 
     return (
       <>
-        <h2 className={styles.searchResultHeader}>Nasze mieszkania</h2>
+        <h2 className={styles.searchResultHeader}>Wybrane dla Ciebie</h2>
         <div className={styles.searchResultsTableWrapper}>
           <table className={styles.searchResultTable}>
             <tbody>

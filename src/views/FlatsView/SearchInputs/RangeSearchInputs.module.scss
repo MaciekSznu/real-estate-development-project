@@ -9,14 +9,17 @@
 
   .rangesItem {
     width: calc(100% - 8rem);
-    // margin-right: 2rem;
-    // margin-left: 2rem;
+
 
     .rangesTitle {
       color: $color-3;
-      font-family: 'Rubik', sans-serif;
+      font-family: 'Spartan', sans-serif;
       font-weight: 500;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 1rem;
       padding-bottom: .5rem;
+
     }
   }
 

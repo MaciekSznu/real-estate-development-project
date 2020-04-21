@@ -7,14 +7,14 @@
   border-radius: 100%;
   cursor: pointer;
   display: block;
-  height: 0.8rem;
+  height: 1rem;
   margin-left: -0.4rem;
   margin-top: -0.55rem;
   outline: none;
   position: absolute;
   top: 50%;
   transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
-  width: 0.8rem;
+  width: 1rem;
 
   &:active {
     transform: scale(1.2);
@@ -23,7 +23,7 @@
   &:focus {
     box-shadow: 0 0 0 5px rgba(63, 81, 181, 0.2);
   }
-  
+
   &-container {
     transition: left 0.3s ease-out;
   }
@@ -37,7 +37,8 @@
   transform: translateZ(0);
   white-space: nowrap;
 
-  &--min, &--max {
+  &--min,
+  &--max {
     bottom: -1.4rem;
     position: absolute;
     display: none;
@@ -61,7 +62,6 @@
     // left: -50%;
     position: relative;
   }
-
 }
 
 .input-range__track {
@@ -83,7 +83,6 @@
 
   &--active {
     background: $color-4;
-
   }
 
   & > .input-range__slider-container ~ .input-range__slider-container {

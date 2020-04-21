@@ -10,11 +10,25 @@
 
   .sectionSubTitle {
     @include sectionSubTitle;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    margin-top: 2rem;
     margin-bottom: .5rem;
   }
 
   .sectionParagraph {
     @include sectionParagraph;
+  }
+
+  .sliderWrapper {
+    max-width: 100%;
+    height: 600px;
+
+    // .sliderDescription {
+    //   position: relative;
+    //   z-index: 1;
+    // }
   }
 
   .flatSearchWrapper {
