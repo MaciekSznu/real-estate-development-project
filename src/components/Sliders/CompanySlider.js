@@ -15,7 +15,7 @@ const AutoplayerSlider = withAutoplay(AwesomeSlider);
 const CompanySlider = (
   <AutoplayerSlider bullets={true} play={true}
   cancelOnInteraction={false}
-  interval={4000} className={styles.sliderWrapper}>
+  interval={4500} className={styles.sliderWrapper}>
     <div data-src={slide_01} >
       <p className={styles.sliderDescription}>2015 - 124 mieszkania</p>
     </div>

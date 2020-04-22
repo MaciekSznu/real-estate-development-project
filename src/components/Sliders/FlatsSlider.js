@@ -11,9 +11,8 @@ import slide_04 from '../../assets/images/interior_04_1280_720.jpg';
 import slide_05 from '../../assets/images/interior_08_1280_853.jpg';
 import slide_06 from '../../assets/images/interior_06_1280_753.jpg';
 
-
 const AutoplayerSlider = withAutoplay(AwesomeSlider);
-
+ 
 const FlatsSlider = (
   <AutoplayerSlider bullets={true} play={true}
   cancelOnInteraction={false}
@@ -40,7 +39,3 @@ const FlatsSlider = (
 );
 
 export default FlatsSlider;
-
-
-
-

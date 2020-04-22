@@ -6,7 +6,7 @@ import '../../views/Root/index.css';
 export const LocationMap = () => {
   const positions = [
     {
-      coordinates: [50.034335, 19.899316],
+      coordinates: [50.034053, 19.895054],
       popup: 'Inwestycja',
       iconName: 'home_pin.png'
     },
@@ -61,15 +61,10 @@ export const LocationMap = () => {
         const icon = L.icon({
           className: 'location-icon',
           iconUrl: require(`../../../public/icons/${position.iconName}`),
-          // iconSize: [30, 30],
-          // iconAnchor: [15, 15],
-          // popupAnchor: [0, -15],
           iconSize: [24, 24],
           iconAnchor: [12, 12],
           popupAnchor: [0, -12],
           shadowUrl: require(`../../../public/icons/${shadow}`),
-          // shadowSize: [36, 36],
-          // shadowAnchor: [18, 18],
           shadowSize: [30, 30],
           shadowAnchor: [15, 15],
         });
@@ -85,10 +80,10 @@ export const LocationMap = () => {
 };
 
 export const ContactMap = () => {
-  const position = [50.0381261, 19.9426738];
+  const position = [50.018347, 19.904964];
   const rectangle = [
-    [50.02, 19.92],
-    [50.05, 19.97]
+    [50.00, 19.88],
+    [50.04, 19.93]
   ];
   return (
     <Map center={position} zoom={14} zoomControl={false}>
@@ -105,4 +100,3 @@ export const ContactMap = () => {
     </Map>
   );
 };
-

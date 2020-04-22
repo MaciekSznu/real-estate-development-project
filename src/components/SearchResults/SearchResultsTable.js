@@ -21,7 +21,7 @@ class SearchResultsTable extends React.Component {
     this.setState({width: window.innerWidth, height: window.innerHeight});
   }
 
-  isBooleanTrue = (item) => {return item === true ? '\u2022' : ''};
+  isBalconyOrTerrace = (item) => {return item === true ? '\u2022' : ''};
 
   filterFlatsArray(props) {
     return (
@@ -52,8 +52,8 @@ class SearchResultsTable extends React.Component {
           <td>{floor}</td>
           <td>{rooms}</td>
           <td>{area}{' m2'}</td>
-          { this.state.width >= 930 && <td>{this.isBooleanTrue(balcony)}</td> }
-          { this.state.width >= 930 && <td>{this.isBooleanTrue(terrace)}</td> }
+          { this.state.width >= 930 && <td>{this.isBalconyOrTerrace(balcony)}</td> }
+          { this.state.width >= 930 && <td>{this.isBalconyOrTerrace(terrace)}</td> }
           <td>{price}{' zł'}</td>
           { this.state.width >= 930 && <td>{status}</td> }
           <td>{chart}</td>
@@ -90,7 +90,6 @@ class SearchResultsTable extends React.Component {
       return <th key={index}>{value.toUpperCase()}</th>
     });
   }
-
 
   render() {
     const numberOfflats = this.filterFlatsArray().length;

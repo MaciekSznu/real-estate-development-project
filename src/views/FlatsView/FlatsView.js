@@ -6,7 +6,6 @@ import FlatsSlider from '../../components/Sliders/FlatsSlider';
  
 class FlatsView extends React.Component {
 
-  // stan filtrów po zmianie
   state = {filters:{
     selectedFloors: {},
     selectedRooms: {},
@@ -14,7 +13,6 @@ class FlatsView extends React.Component {
     selectedPrice: {},
   }}
 
-  // funkcja rejestrująca zmiany plus destrukturyzacja i dodawanie value
   onFloorChange = (value) => {
     const selectedFloors = value.floor;
     this.setState({filters: {...this.state.filters, selectedFloors}});
@@ -35,7 +33,6 @@ class FlatsView extends React.Component {
     this.setState({filters: {...this.state.filters, selectedPrice}});
   };
 
-  // onRangeChange jako props
   render() {
     return (
       <div className={styles.flatsViewWrapper} id='mieszkania'>

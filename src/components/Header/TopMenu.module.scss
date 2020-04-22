@@ -53,8 +53,8 @@
   right: 0;
   width: 40px;
   height: 40px;
-  background-color: rgba($color-4, .3);
-  border: 1px solid rgba($footer-text-color, .6);
+  background-color: rgba($color-4, .4);
+  //border: 1px solid rgba($footer-text-color, .9);
   z-index: 1001;
   display: flex;
   justify-content: center;
@@ -62,7 +62,7 @@
   cursor: pointer;
 
   .scrollToTopIcon {
-    color: rgba($color-3, .6);
+    color: rgba($footer-text-color, .9);
     font-size: 1.5rem;
   }
 }

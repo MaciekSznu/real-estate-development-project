@@ -51,8 +51,5 @@ body {
 }
 
 .location-icon {
-  /* filter: invert(10%) sepia(8%) saturate(7482%) hue-rotate(212deg) brightness(107%) contrast(119%); */
   opacity: .7;
 }
-
-

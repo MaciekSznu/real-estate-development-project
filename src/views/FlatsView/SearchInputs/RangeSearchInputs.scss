@@ -44,14 +44,6 @@
     display: none;
   }
 
-  // &--min {
-  //   left: 0;
-  // }
-
-  // &--max {
-  //   right: 0;
-  // }
-
   &--value {
     position: absolute;
     top: -1.8rem;
@@ -59,7 +51,6 @@
   }
 
   &-container {
-    // left: -50%;
     position: relative;
   }
 }
