@@ -11,7 +11,25 @@
     @include sectionTitle;
   }
 
-  .sectionParagraph {
-    @include sectionParagraph;
+  .companyTopSectionWrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    .sectionParagraph {
+      @include sectionParagraph;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+
+      .sectionParagraph {
+        @include sectionParagraph;
+        width: 50%;
+        margin-right: .5rem;
+      }
+    }
   }
 }
