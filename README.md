@@ -1,5 +1,7 @@
 # Real estate development project - draft version
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/efb30b20-985f-45f3-9d3c-f16bbe6dadad/deploy-status)](https://app.netlify.com/sites/vigilant-jennings-90c3cc/deploys)
+
 Created with create-react-app.
 
 Used additional packages:
