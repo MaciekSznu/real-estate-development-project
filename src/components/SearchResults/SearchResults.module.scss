@@ -14,11 +14,16 @@
 .searchResultsTableWrapper {
 
   @media (min-width: 720px) {
+
+    display: flex;
+    justify-content: center;
+
     .searchResultTable {
-      width: 100%;
+      width: calc(100% - 4rem);
       text-align: center;
       border-collapse: collapse;
       border-top: 1px solid $color-4;
+      padding: 0 2rem;
 
       .searchResultTableHeader {
 
@@ -57,10 +62,23 @@
     }
   }
 
+  @media (min-width: 1024px) {
+
+    .searchResultTable {
+      width: calc(100% - 2rem);
+      text-align: center;
+      border-collapse: collapse;
+      border-top: 1px solid $color-4;
+      padding: 0 1rem;
+    }
+  }
+
   @media (max-width: 719px) {
     .searchResultTable, .searchResultTableHeader, .searchResultTableRow, tbody, th, td {
       display: block;
-
+    }
+    .searchResultTable {
+      margin: 1rem;
     }
 
     .searchResultTableHeader th {
