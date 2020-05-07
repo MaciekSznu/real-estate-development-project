@@ -10,7 +10,7 @@ const HeroView = () => (
     </div>
     <button className={styles.heroButton}>
       <Link to='inwestycja' smooth={true} duration={1000}>
-          <span>czytaj dalej</span>
+          <span>odkrywaj</span>
       </Link>
     </button>
   </div>
