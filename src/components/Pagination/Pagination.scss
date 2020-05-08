@@ -12,35 +12,43 @@
     font-size: 1rem;
     font-family: 'Spartan', sans-serif;
     font-weight: 400;
-    margin: 1rem 0 0;
+    margin: .5rem 0 0;
+    padding: 0;
 
     &__item {
       display: block;
-      width:  1.2rem;
-      height:  1.2rem;
-      margin: .2rem;
+      width:  1.5rem;
+      height:  1.5rem;
+      line-height: 1.5rem;
+      padding-top: .1rem;
+      margin: .3rem;
       display: flex;
       justify-content: center;
       align-items: center;
       cursor: pointer;
       transition: .2s;
-      color: $color-5;
+      background-color: $color-4;
+      color: $footer-text-color;
+      border-radius: .2rem;
 
       &:hover {
-       color: $color-6;
+        background-color: $color-5;
       }
 
       &--active {
-        color: $color-6;
+        background-color: $color-6;
+
       }
     }
   @media (min-width: 768px) {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
+      margin: .8rem 0 0;
   
       &__item {
-        width:  1.2rem;
-        height:  1.2rem;
-        margin: .5rem;
+        width:  2.4rem;
+        height:  2.4rem;
+        margin: .4rem;
+        padding-top: .4rem;
       }
     }
   }
