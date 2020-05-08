@@ -3,6 +3,7 @@ import styles from "./FlatsView.module.scss";
 import RangeSearchInputs from "../FlatsView/SearchInputs/RangeSearchInputs";
 import SearchResultsTable from "../../components/SearchResults/SearchResultsTable";
 import FlatsSlider from '../../components/Sliders/FlatsSlider';
+import Fade from 'react-reveal/Fade';
  
 class FlatsView extends React.Component {
 
@@ -36,8 +37,12 @@ class FlatsView extends React.Component {
   render() {
     return (
       <div className={styles.flatsViewWrapper} id='mieszkania'>
-        <h1 className={styles.sectionTitle}>Mieszkania</h1>
-        <p className={styles.sectionParagraph}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper vel nibh quis finibus. Donec eu tincidunt ante, auctor porta nulla. Integer semper congue lacus non egestas. Curabitur mollis, lorem in convallis dapibus, enim enim fermentum tortor, et hendrerit risus urna nec metus. Aenean lobortis malesuada tortor. Donec egestas finibus varius. Nulla luctus facilisis malesuada. Suspendisse et ex est.</p>
+        <Fade left duration={2000}>
+          <h1 className={styles.sectionTitle}>Mieszkania</h1>
+        </Fade>
+        <Fade right delay={500} duration={2000}>
+          <p className={styles.sectionParagraph}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper vel nibh quis finibus. Donec eu tincidunt ante, auctor porta nulla. Integer semper congue lacus non egestas. Curabitur mollis, lorem in convallis dapibus, enim enim fermentum tortor, et hendrerit risus urna nec metus. Aenean lobortis malesuada tortor. Donec egestas finibus varius. Nulla luctus facilisis malesuada. Suspendisse et ex est.</p>
+        </Fade>
         {FlatsSlider}
         <h2 className={styles.sectionSubTitle}>Znajdź swoje wymarzone mieszkanie</h2>
         <div className={styles.flatSearchWrapper}>
