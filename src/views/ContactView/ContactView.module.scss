@@ -70,8 +70,7 @@
       font-size: .8rem;
   
       .sectionTitle {
-        @include sectionTitle;
-  
+        @include sectionSubTitle;
         margin-top: 0;
         margin-bottom: 1rem;
         color: $footer-text-color;
@@ -99,11 +98,29 @@
       display: block;
       width: 40%;
       max-width: 500px;
+      padding-right: 1.5rem;
     }
   }
 
   @media (min-width: 1360px) {
-    padding: 3rem calc((100vw - 1360px) / 2 + 3rem) 1rem;
+    padding: 3rem calc((100vw - 1360px) / 2) 1rem;
+
+    .contactViewTextWrapper {
+  
+      .sectionTitle {
+        margin-top: 0;
+        color: $footer-text-color;
+        padding: 0;
+      }
+
+      .sectionAdress {
+        padding: 0;
+      }
+    }
+
+    .mapWrapper {
+      padding-right: 0;
+    }
   }
 }
 
@@ -114,17 +131,17 @@
   width: 100vw;
   background-color: $color-6;
   color: $footer-text-color;
-  padding: .5rem 3rem .5rem 2rem;
+  padding: .5rem 1rem .5rem 1rem;
   display: flex;
   justify-content: space-between;
   border-top: 1px solid #6f74a5;
 
   @media (min-width: 768px) {
-    padding: .5rem 3rem .5rem;
+    padding: .5rem 1rem .5rem;
   }
 
   @media (min-width: 1360px) {
-    padding: .5rem calc((100vw - 1360px) / 2 + 3rem) .5rem;
+    padding: .5rem calc((100vw - 1360px) / 2) .5rem;
   }
 
   .copyRightText {
