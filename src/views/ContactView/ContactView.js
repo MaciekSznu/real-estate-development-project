@@ -27,7 +27,7 @@ const ContactView = () => (
       </div>
     </div>
     <div className={styles.copyRight}>
-      <p className={styles.copyRightText}>&copy; 2020 Maciej Sznurawa / All rights reserved / Photos from Pixabay</p>
+      <p className={styles.copyRightText}>&copy; 2020 <a href="https://www.beeontheweb.pl" target="_blank" rel="noopener noreferrer">BEEONTHEWEB</a> / All rights reserved / Photos from Pixabay</p>
       <div className={styles.copyRightIcons}>
         <span className={styles.copyRightIcon}><FontAwesomeIcon icon={faFacebookSquare} /></span>
         <span className={styles.copyRightIcon}><FontAwesomeIcon icon={faInstagramSquare} /></span>
