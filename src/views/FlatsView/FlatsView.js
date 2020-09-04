@@ -4,6 +4,7 @@ import RangeSearchInputs from "../FlatsView/SearchInputs/RangeSearchInputs";
 import SearchResultsTable from "../../components/SearchResults/SearchResultsTable";
 import FlatsSlider from '../../components/Sliders/FlatsSlider';
 import Fade from 'react-reveal/Fade';
+import GraphicSearch from '../../components/GraphicSearch/GraphicSearch';
  
 class FlatsView extends React.Component {
 
@@ -45,6 +46,7 @@ class FlatsView extends React.Component {
         </Fade>
         {FlatsSlider}
         <h2 className={styles.sectionSubTitle}>Znajdź swoje wymarzone mieszkanie</h2>
+        <GraphicSearch />
         <div className={styles.flatSearchWrapper}>
           <RangeSearchInputs
           onFloorChange = {this.onFloorChange}
