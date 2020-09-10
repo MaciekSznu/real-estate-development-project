@@ -120,6 +120,8 @@ class GraphicSearch extends React.Component {
     imageHeight: null,
     hoveredArea: null,
     clickedArea: null,
+    src: URL,
+    map: MAP,
   }
 
   componentDidMount() {
@@ -153,17 +155,15 @@ class GraphicSearch extends React.Component {
 
   render() {
     const selectedFlatNumber = this.state.clickedArea;
-    console.log(selectedFlatNumber);
     const flats = flatsArray;
     const selectedFlat = flats[selectedFlatNumber];
-    console.log(selectedFlat);
 
     return (
       <>
         <div className={styles.imageWrapper}>
 
           <ImageMapper
-            src={URL} map={MAP}
+            src={this.state.src} map={this.state.map}
             width={this.state.imageWidth}
             imgWidth={this.state.baseImageWidth}
             height={this.state.imageHeight}
