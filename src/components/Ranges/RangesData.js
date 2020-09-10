@@ -39,7 +39,7 @@ export const areaRange =
       max: maxAreaValue,
     },
     label: 'm2',
-    step: 5,
+    step: 1,
   };
 
 const minPriceValue = Math.min.apply(Math, flatsArray.map(flat => flat.price));
