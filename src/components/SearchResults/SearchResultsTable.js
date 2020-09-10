@@ -51,7 +51,7 @@ class SearchResultsTable extends React.Component {
           <td>{flatNumber}</td>
           <td>{floor}</td>
           <td>{rooms}</td>
-          <td>{area}{' m2'}</td>
+          <td>{area}{' m'}<sup>{'2'}</sup></td>
           { this.state.width >= 930 && <td>{this.isBalconyOrTerrace(balcony)}</td> }
           { this.state.width >= 930 && <td>{this.isBalconyOrTerrace(terrace)}</td> }
           <td>{price}{' zł'}</td>
