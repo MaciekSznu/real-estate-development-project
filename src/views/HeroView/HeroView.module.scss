@@ -8,11 +8,33 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh;
-  max-height: 700px;
-  background-image: url(../../assets/images/facade_01_1920.jpg);
-  background-position: center;
   padding: 0;
+  height: 100vw;
+  background-position: center;
+  background-size: contain;
+  background-image: url(../../assets/images/heroes/hero_576_576.jpg);
+  @media screen and (min-width: 577px) {
+    background-image: url(../../assets/images/heroes/hero_768_768.jpg);
+  }
+  @media screen and (min-width: 769px) {
+    background-image: url(../../assets/images/heroes/hero_1024_1024.jpg);
+
+    @media (orientation: landscape) {
+      background-image: url(../../assets/images/heroes/hero_1024_576.jpg);
+      background-size: cover;
+      max-height: 576px;
+    }
+  }
+  @media screen and (min-width: 1025px) and (orientation: landscape){
+    background-image: url(../../assets/images/heroes/hero_1368_770.jpg);
+    max-height: 700px;
+  }
+  @media screen and (min-width: 1369px) and (orientation: landscape){
+    background-image: url(../../assets/images/heroes/hero_1920_1080.jpg);
+    max-height: 80vh;
+  }
+
+  // background-size: cover;
 
   .heroViewTextWrapper {
     max-width: 100%;
