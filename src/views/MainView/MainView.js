@@ -12,8 +12,8 @@ const MainView = () => (
     <TopMenu />
     <HeroView />
     <InvestmentView />
-    <LocationView />
     <FlatsView />
+    <LocationView />
     <CompanyView />
     <ContactView />
   </>

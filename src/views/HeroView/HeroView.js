@@ -15,7 +15,7 @@ const HeroView = () => (
     </Zoom>
     <button className={styles.heroButton}>
       <Link to='inwestycja' smooth={true} duration={1000}>
-          <span>odkrywaj</span>
+          <span>zobacz</span>
       </Link>
     </button>
   </div>
