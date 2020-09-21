@@ -9,10 +9,10 @@ const TopMenuItems = () => {
       <Link to='inwestycja' spy={true} hashSpy={true} smooth={true} duration={500} className={styles.topMenuItem} activeClass={styles.topMenuItemActive}>Inwestycja</Link>
       </li>
       <li>
-        <Link to='lokalizacja' spy={true} hashSpy={true} smooth={true} duration={500} className={styles.topMenuItem} activeClass={styles.topMenuItemActive}>Lokalizacja</Link>
+        <Link to='mieszkania' spy={true} hashSpy={true} smooth={true} duration={500} className={styles.topMenuItem} activeClass={styles.topMenuItemActive}>Mieszkania</Link>
       </li>
       <li>
-        <Link to='mieszkania' spy={true} hashSpy={true} smooth={true} duration={500} className={styles.topMenuItem} activeClass={styles.topMenuItemActive}>Mieszkania</Link>
+        <Link to='lokalizacja' spy={true} hashSpy={true} smooth={true} duration={500} className={styles.topMenuItem} activeClass={styles.topMenuItemActive}>Lokalizacja</Link>
       </li>
       <li>
         <Link to='inwestor' spy={true} hashSpy={true} smooth={true} duration={500} className={styles.topMenuItem} activeClass={styles.topMenuItemActive}>Inwestor</Link>

@@ -8,14 +8,14 @@ const HeroView = () => (
     <Zoom duration={2000} >
       <div className={styles.heroViewTextWrapper}>
         <h1 className={styles.heroTitle}>
-            Twoje okno na świat
+            Wyjątkowe mieszkania
         </h1>
         <p className={styles.heroText}></p>
       </div>
     </Zoom>
     <button className={styles.heroButton}>
-      <Link to='inwestycja' smooth={true} duration={1000}>
-          <span>zobacz</span>
+      <Link to='wyszukiwarka' smooth={true} duration={1000}>
+          <span>Znajdź swoje</span>
       </Link>
     </button>
   </div>

@@ -60,7 +60,7 @@ class TopMenu extends React.Component {
           { (desktopMenuOpen || mobileMenuOpen) && <TopMenuItems/> }
         </ul>
         <div className={styles.scrollToTop}>
-          <Link to='inwestycja' smooth={true} duration={1000}>
+          <Link to='hero' smooth={true} duration={1000}>
             <span className={styles.scrollToTopIcon}><FontAwesomeIcon icon={faAngleDoubleUp} /></span>
           </Link>
         </div>

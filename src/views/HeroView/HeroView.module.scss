@@ -45,15 +45,10 @@
     .heroTitle {
       @include sectionTitle;
       text-transform: uppercase;
-      font-weight: 500;
-      font-size: 2rem;
       color: $color-5;
+      color: $footer-text-color;
+      text-shadow: 2px 2px 1px rgba($color-5,.75);
       text-align: center;
-      //text-shadow: 2px 2px 2px rgba(189, 194, 255, 0.8);
-
-      @media (min-width: 768px) {
-        font-size: 3rem;
-      }
     }
 
     .heroParagraph {
@@ -63,18 +58,18 @@
   }
 
   .heroButton {
-    height: 3rem;
+    height: 2.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
     background-color: $color-4;
     color: $footer-text-color;
-    font-size: 1rem;
+    font-size: .75rem;
     font-family: "Spartan", sans-serif;
     font-weight: 500;
     letter-spacing: .05rem;
-    padding: 0.5rem 2.5rem;
+    padding: 0.5rem 1.5rem;
     cursor: pointer;
     border: none;
     border-radius: 1.5rem;
@@ -82,6 +77,12 @@
 
     &:hover {
       background-color: $color-6;
+    }
+
+    @media (min-width: 768px) {
+      height: 3rem;
+      font-size: 1rem;
+      padding: 0.5rem 2.5rem;
     }
   }
 }
