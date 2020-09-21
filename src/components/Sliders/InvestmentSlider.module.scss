@@ -3,6 +3,13 @@
 .sliderWrapper {
   margin-top: 1rem;
   max-width: 100%;
+  width: 100%;
+  height: calc(100vw * (9 / 16));
+  min-height: 350px;
+
+  @media (min-width: 1280px) {
+    height: 770px;
+  }
 
   .sliderDescription {
     font-family: "Spartan", sans-serif;
@@ -13,9 +20,13 @@
     width: 100%;
     z-index: 1;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
     text-shadow: $slider-text-shadow;
+
+    @media (min-width: 768px) {
+      font-size: 2rem;
+    }
 
     @media (min-width: 1280px) {
       font-size: 3rem;

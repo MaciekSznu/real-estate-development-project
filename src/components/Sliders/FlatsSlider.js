@@ -4,12 +4,12 @@ import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import styles from './InvestmentSlider.module.scss';
 import './InvestmentSlider.css';
 
-import slide_01 from '../../assets/images/interior_01_1280_768.jpg';
-import slide_02 from '../../assets/images/interior_09_1280_885.jpg';
-import slide_03 from '../../assets/images/interior_10_1280_703.jpg';
-import slide_04 from '../../assets/images/interior_04_1280_720.jpg';
-import slide_05 from '../../assets/images/interior_08_1280_853.jpg';
-import slide_06 from '../../assets/images/interior_06_1280_753.jpg';
+import slide_01 from '../../assets/images/flats_slider/living_room_01_1920_1080.jpg';
+import slide_02 from '../../assets/images/flats_slider/kitchen_1920_1080.jpg';
+import slide_03 from '../../assets/images/flats_slider/bedroom_02_1920_1080.jpg';
+import slide_04 from '../../assets/images/flats_slider/home_office_1920_1080.jpg';
+import slide_05 from '../../assets/images/flats_slider/bathroom_1920_1080.jpg';
+import slide_06 from '../../assets/images/flats_slider/child_room_1920_1080.jpg';
 
 const AutoplayerSlider = withAutoplay(AwesomeSlider);
  

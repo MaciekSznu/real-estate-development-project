@@ -108,6 +108,7 @@
         font-size: .7rem;
         text-align: center;
         padding: 3px;
+        height: 24px;
         // padding-left: 200px; // do dopasowania
         margin-left: 120px; // do dopasowania
         border-bottom: 1px solid $color-4;
@@ -116,7 +117,7 @@
 
         &:before {
           position: absolute;
-          height: 18px;
+          height: 21px;
           left: 0;
           width: 120px;
           padding: 0 10px;

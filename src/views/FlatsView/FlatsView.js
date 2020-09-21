@@ -45,7 +45,7 @@ class FlatsView extends React.Component {
           <p className={styles.sectionParagraph}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper vel nibh quis finibus. Donec eu tincidunt ante, auctor porta nulla. Integer semper congue lacus non egestas. Curabitur mollis, lorem in convallis dapibus, enim enim fermentum tortor, et hendrerit risus urna nec metus. Aenean lobortis malesuada tortor. Donec egestas finibus varius. Nulla luctus facilisis malesuada. Suspendisse et ex est.</p>
         </Fade>
         {FlatsSlider}
-        <h2 className={styles.sectionSubTitle}>Znajdź swoje wymarzone mieszkanie</h2>
+        <h2 className={styles.sectionSubTitle} id='wyszukiwarka'>Znajdź swoje wymarzone mieszkanie</h2>
         <GraphicSearch />
         <div className={styles.flatSearchWrapper}>
           <RangeSearchInputs
