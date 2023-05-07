@@ -20,7 +20,7 @@
     "react-reveal": "^1.2.2",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^2.1.8",
+    "react-scripts": "^5.0.1",
     "react-scroll": "^1.8.1",
     "react-transition-group": "^4.4.1",
     "react-visibility-sensor": "^5.1.1"
